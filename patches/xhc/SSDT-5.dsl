@@ -5,7 +5,7 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of SSDT5.aml, Wed Jan 11 10:33:57 2023
+ * Disassembly of SSDT-5.aml, Sat Jan 21 09:44:36 2023
  *
  * Original Table Header:
  *     Signature        "SSDT"
@@ -72,7 +72,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (HS01)
+    Scope (\_SB.PCI0.XHC.RHUB.HS01)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -85,7 +85,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (HS02)
+    Scope (\_SB.PCI0.XHC.RHUB.HS02)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -98,7 +98,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (HS03)
+    Scope (\_SB.PCI0.XHC.RHUB.HS03)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -111,7 +111,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (HS04)
+    Scope (\_SB.PCI0.XHC.RHUB.HS04)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -124,7 +124,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (HS05)
+    Scope (\_SB.PCI0.XHC.RHUB.HS05)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -167,7 +167,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (HS06)
+    Scope (\_SB.PCI0.XHC.RHUB.HS06)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -180,7 +180,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (HS07)
+    Scope (\_SB.PCI0.XHC.RHUB.HS07)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -193,7 +193,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (HS08)
+    Scope (\_SB.PCI0.XHC.RHUB.HS08)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -206,7 +206,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (HS09)
+    Scope (\_SB.PCI0.XHC.RHUB.HS09)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -219,7 +219,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (HS10)
+    Scope (\_SB.PCI0.XHC.RHUB.HS10)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -232,7 +232,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (USR1)
+    Scope (\_SB.PCI0.XHC.RHUB.USR1)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -245,7 +245,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (USR2)
+    Scope (\_SB.PCI0.XHC.RHUB.USR2)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -258,7 +258,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (SS01)
+    Scope (\_SB.PCI0.XHC.RHUB.SS01)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -271,7 +271,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (SS02)
+    Scope (\_SB.PCI0.XHC.RHUB.SS02)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -284,7 +284,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (SS03)
+    Scope (\_SB.PCI0.XHC.RHUB.SS03)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -297,7 +297,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (SS04)
+    Scope (\_SB.PCI0.XHC.RHUB.SS04)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -310,7 +310,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (SS05)
+    Scope (\_SB.PCI0.XHC.RHUB.SS05)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
@@ -323,7 +323,7 @@ DefinitionBlock ("", "SSDT", 2, "INTEL", "xh_rvp07", 0x00000000)
         }
     }
 
-    Device (SS06)
+    Scope (\_SB.PCI0.XHC.RHUB.SS06)
     {
         Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
         {
