@@ -58,7 +58,7 @@
 					<key>Comment</key>
 					<string>Inject several missing devices</string>
 					<key>Enabled</key>
-					<true/>
+					<false/>
 					<key>Path</key>
 					<string>SSDT-PCI0.aml</string>
 				</dict>
@@ -112,14 +112,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>XHC USB Mapping through ACPI</string>
-					<key>Enabled</key>
-					<true/>
-					<key>Path</key>
-					<string>SSDT-XHC.aml</string>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>_OSI override to return true through Windows 10 - requires _OSI to XOSI rename</string>
 					<key>Enabled</key>
 					<true/>
@@ -135,7 +127,7 @@
 					<key>Comment</key>
 					<string>Delete OEM XHC</string>
 					<key>Enabled</key>
-					<true/>
+					<false/>
 					<key>OemTableId</key>
 					<data>eGhfcnZwMDc=</data>
 					<key>TableLength</key>
@@ -701,7 +693,7 @@
 					<key>Count</key>
 					<integer>0</integer>
 					<key>Enabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>UE5MRg==</data>
 					<key>Limit</key>
@@ -984,7 +976,7 @@
 					<key>device_type</key>
 					<string>Audio device</string>
 					<key>layout-id</key>
-					<data>CwAAAA==</data>
+					<data>DQAAAA==</data>
 					<key>model</key>
 					<string>Sunrise Point-LP HD Audio</string>
 				</dict>
@@ -1064,15 +1056,15 @@
 				</dict>
 				<dict>
 					<key>Arch</key>
-					<string>x86_64</string>
+					<string>Any</string>
 					<key>BundlePath</key>
-					<string>DebugEnhancer.kext</string>
+					<string>VirtualSMC.kext</string>
 					<key>Comment</key>
-					<string>Enable debug output in the macOS kernel</string>
+					<string>VirtualSMC.kext</string>
 					<key>Enabled</key>
 					<true/>
 					<key>ExecutablePath</key>
-					<string>Contents/MacOS/DebugEnhancer</string>
+					<string>Contents/MacOS/VirtualSMC</string>
 					<key>MaxKernel</key>
 					<string></string>
 					<key>MinKernel</key>
@@ -1084,13 +1076,85 @@
 					<key>Arch</key>
 					<string>Any</string>
 					<key>BundlePath</key>
-					<string>VirtualSMC.kext</string>
+					<string>NVMeFix.kext</string>
 					<key>Comment</key>
-					<string>VirtualSMC.kext</string>
+					<string>NVMeFix.kext</string>
 					<key>Enabled</key>
 					<true/>
 					<key>ExecutablePath</key>
-					<string>Contents/MacOS/VirtualSMC</string>
+					<string>Contents/MacOS/NVMeFix</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>SMCBatteryManager.kext</string>
+					<key>Comment</key>
+					<string>SMCBatteryManager.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/SMCBatteryManager</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>SMCDellSensors.kext</string>
+					<key>Comment</key>
+					<string>SMCDellSensors.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/SMCDellSensors</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>SMCProcessor.kext</string>
+					<key>Comment</key>
+					<string>SMCProcessor.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/SMCProcessor</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>x86_64</string>
+					<key>BundlePath</key>
+					<string>DebugEnhancer.kext</string>
+					<key>Comment</key>
+					<string>Enable debug output in the macOS kernel</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/DebugEnhancer</string>
 					<key>MaxKernel</key>
 					<string></string>
 					<key>MinKernel</key>
@@ -1120,13 +1184,13 @@
 					<key>Arch</key>
 					<string>Any</string>
 					<key>BundlePath</key>
-					<string>BlueToolFixup.kext</string>
+					<string>AppleALC.kext</string>
 					<key>Comment</key>
-					<string>BlueToolFixup.kext</string>
+					<string>AppleALC.kext</string>
 					<key>Enabled</key>
 					<true/>
 					<key>ExecutablePath</key>
-					<string>Contents/MacOS/BlueToolFixup</string>
+					<string>Contents/MacOS/AppleALC</string>
 					<key>MaxKernel</key>
 					<string></string>
 					<key>MinKernel</key>
@@ -1156,13 +1220,67 @@
 					<key>Arch</key>
 					<string>Any</string>
 					<key>BundlePath</key>
-					<string>NVMeFix.kext</string>
+					<string>CPUFriendDataProvider.kext</string>
 					<key>Comment</key>
-					<string>NVMeFix.kext</string>
+					<string>CPUFriendDataProvider.kext</string>
 					<key>Enabled</key>
 					<true/>
 					<key>ExecutablePath</key>
-					<string>Contents/MacOS/NVMeFix</string>
+					<string></string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>ECEnabler.kext</string>
+					<key>Comment</key>
+					<string>ECEnabler.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/ECEnabler</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>HibernationFixup.kext</string>
+					<key>Comment</key>
+					<string>HibernationFixup.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/HibernationFixup</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>USBMap.kext</string>
+					<key>Comment</key>
+					<string>USBMap.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string></string>
 					<key>MaxKernel</key>
 					<string></string>
 					<key>MinKernel</key>
@@ -1199,42 +1317,6 @@
 					<true/>
 					<key>ExecutablePath</key>
 					<string>Contents/MacOS/VoodooPS2Controller</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcm4360_Injector.kext</string>
-					<key>Comment</key>
-					<string>AirPortBrcm4360_Injector.kext</string>
-					<key>Enabled</key>
-					<false/>
-					<key>ExecutablePath</key>
-					<string></string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext</string>
-					<key>Comment</key>
-					<string>AirPortBrcmNIC_Injector.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string></string>
 					<key>MaxKernel</key>
 					<string></string>
 					<key>MinKernel</key>
@@ -1318,6 +1400,24 @@
 					<key>Arch</key>
 					<string>Any</string>
 					<key>BundlePath</key>
+					<string>BrightnessKeys.kext</string>
+					<key>Comment</key>
+					<string>BrightnessKeys.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/BrightnessKeys</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
 					<string>VoodooI2C.kext/Contents/PlugIns/VoodooGPIO.kext</string>
 					<key>Comment</key>
 					<string>VoodooGPIO.kext</string>
@@ -1372,186 +1472,6 @@
 					<key>Arch</key>
 					<string>Any</string>
 					<key>BundlePath</key>
-					<string>AirportBrcmFixup.kext</string>
-					<key>Comment</key>
-					<string>AirportBrcmFixup.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/AirportBrcmFixup</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>AppleALC.kext</string>
-					<key>Comment</key>
-					<string>AppleALC.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/AppleALC</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>BrightnessKeys.kext</string>
-					<key>Comment</key>
-					<string>BrightnessKeys.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/BrightnessKeys</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>ECEnabler.kext</string>
-					<key>Comment</key>
-					<string>ECEnabler.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/ECEnabler</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>HibernationFixup.kext</string>
-					<key>Comment</key>
-					<string>HibernationFixup.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/HibernationFixup</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>SMCBatteryManager.kext</string>
-					<key>Comment</key>
-					<string>SMCBatteryManager.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/SMCBatteryManager</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>SMCDellSensors.kext</string>
-					<key>Comment</key>
-					<string>SMCDellSensors.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/SMCDellSensors</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>SMCLightSensor.kext</string>
-					<key>Comment</key>
-					<string>SMCLightSensor.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/SMCLightSensor</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>SMCProcessor.kext</string>
-					<key>Comment</key>
-					<string>SMCProcessor.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/SMCProcessor</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
-					<string>SMCSuperIO.kext</string>
-					<key>Comment</key>
-					<string>SMCSuperIO.kext</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/SMCSuperIO</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>Any</string>
-					<key>BundlePath</key>
 					<string>VoodooI2C.kext</string>
 					<key>Comment</key>
 					<string>VoodooI2C.kext</string>
@@ -1577,6 +1497,78 @@
 					<true/>
 					<key>ExecutablePath</key>
 					<string>Contents/MacOS/VoodooI2CHID</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>AirportBrcmFixup.kext</string>
+					<key>Comment</key>
+					<string>AirportBrcmFixup.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/AirportBrcmFixup</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext</string>
+					<key>Comment</key>
+					<string>AirPortBrcmNIC_Injector.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string></string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcm4360_Injector.kext</string>
+					<key>Comment</key>
+					<string>AirPortBrcm4360_Injector.kext</string>
+					<key>Enabled</key>
+					<false/>
+					<key>ExecutablePath</key>
+					<string></string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>BlueToolFixup.kext</string>
+					<key>Comment</key>
+					<string>BlueToolFixup.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/BlueToolFixup</string>
 					<key>MaxKernel</key>
 					<string></string>
 					<key>MinKernel</key>
@@ -1958,7 +1950,7 @@
 				<key>CustomSMBIOSGuid</key>
 				<true/>
 				<key>DisableIoMapper</key>
-				<true/>
+				<false/>
 				<key>DisableLinkeditJettison</key>
 				<true/>
 				<key>DisableRtcChecksum</key>
@@ -1980,7 +1972,7 @@
 				<key>PanicNoKextDump</key>
 				<true/>
 				<key>PowerTimeoutKernelPanic</key>
-				<true/>
+				<false/>
 				<key>ProvideCurrentCpuInfo</key>
 				<false/>
 				<key>SetApfsTrimTimeout</key>
@@ -1997,7 +1989,7 @@
 				<key>FuzzyMatch</key>
 				<true/>
 				<key>KernelArch</key>
-				<string>Auto</string>
+				<string>x86_64</string>
 				<key>KernelCache</key>
 				<string>Auto</string>
 			</dict>
@@ -2052,7 +2044,7 @@
 				<key>LogModules</key>
 				<string>*</string>
 				<key>SysReport</key>
-				<true/>
+				<false/>
 				<key>Target</key>
 				<integer>67</integer>
 			</dict>
@@ -2545,11 +2537,11 @@
 			<key>AppleInput</key>
 			<dict>
 				<key>AppleEvent</key>
-				<string>Builtin</string>
+				<string>Auto</string>
 				<key>CustomDelays</key>
 				<false/>
 				<key>GraphicsInputMirroring</key>
-				<true/>
+				<false/>
 				<key>KeyInitialDelay</key>
 				<integer>50</integer>
 				<key>KeySubsequentDelay</key>
@@ -2734,7 +2726,7 @@
 				<key>FirmwareVolume</key>
 				<false/>
 				<key>HashServices</key>
-				<true/>
+				<false/>
 				<key>OSInfo</key>
 				<false/>
 				<key>UnicodeCollation</key>
