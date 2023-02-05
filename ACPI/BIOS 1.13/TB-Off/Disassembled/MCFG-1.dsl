@@ -3,7 +3,7 @@
  * AML/ASL+ Disassembler version 20200925 (64-bit version)
  * Copyright (c) 2000 - 2020 Intel Corporation
  * 
- * Disassembly of MCFG-1.aml, Sat Jan 21 09:44:36 2023
+ * Disassembly of /Users/rudimar.ronsoni.jr/src/Dell-XPS-9350-MacOS/ACPI/BIOS 1.13/TB-Off/MCFG-1.aml, Sun Feb  5 16:01:35 2023
  *
  * ACPI Data Table [MCFG]
  *

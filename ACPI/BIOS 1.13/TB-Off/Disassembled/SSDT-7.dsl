@@ -5,7 +5,7 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of SSDT-7.aml, Sat Jan 21 09:44:36 2023
+ * Disassembly of /Users/rudimar.ronsoni.jr/src/Dell-XPS-9350-MacOS/ACPI/BIOS 1.13/TB-Off/SSDT-7.aml, Sun Feb  5 16:01:35 2023
  *
  * Original Table Header:
  *     Signature        "SSDT"
