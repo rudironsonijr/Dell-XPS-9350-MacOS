@@ -24,11 +24,19 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Inject Brightness Keys</string>
+					<string>Inject Brightness Keys specific for Dell XPS 9350 (and maybe others)</string>
 					<key>Enabled</key>
 					<true/>
 					<key>Path</key>
 					<string>SSDT-BCKM.aml</string>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Replace OEM DMAR table without Reserved Memory Regions</string>
+					<key>Enabled</key>
+					<true/>
+					<key>Path</key>
+					<string>SSDT-DMAR.aml</string>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -37,6 +45,14 @@
 					<true/>
 					<key>Path</key>
 					<string>SSDT-Debug.aml</string>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Add missing DTGP Method</string>
+					<key>Enabled</key>
+					<true/>
+					<key>Path</key>
+					<string>SSDT-DTGP.aml</string>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -56,15 +72,23 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Inject several missing devices</string>
+					<string>Inject missing MCHC devices</string>
 					<key>Enabled</key>
-					<false/>
+					<true/>
 					<key>Path</key>
-					<string>SSDT-PCI0.aml</string>
+					<string>SSDT-MCHC.aml</string>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Inject plugin-type=1 for CPU power management</string>
+					<string>Inject missing MEM2 device for IGPU</string>
+					<key>Enabled</key>
+					<true/>
+					<key>Path</key>
+					<string>SSDT-MEM2.aml</string>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Sets plugin-type to 1 on first Processor object</string>
 					<key>Enabled</key>
 					<true/>
 					<key>Path</key>
@@ -72,7 +96,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Inject PNLF in order to make Brightness work</string>
+					<string>Inject PNLF device with a _UID of 16 for backlight control</string>
 					<key>Enabled</key>
 					<true/>
 					<key>Path</key>
@@ -118,6 +142,14 @@
 					<key>Path</key>
 					<string>SSDT-XOSI.aml</string>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>USB power injection</string>
+					<key>Enabled</key>
+					<true/>
+					<key>Path</key>
+					<string>SSDT-USBX.aml</string>
+				</dict>
 			</array>
 			<key>Delete</key>
 			<array>
@@ -134,6 +166,20 @@
 					<integer>0</integer>
 					<key>TableSignature</key>
 					<data>U1NEVA==</data>
+				</dict>
+				<dict>
+					<key>All</key>
+					<false/>
+					<key>Comment</key>
+					<string>Drop DMAR OEM table</string>
+					<key>Enabled</key>
+					<true/>
+					<key>OemTableId</key>
+					<data></data>
+					<key>TableLength</key>
+					<integer>240</integer>
+					<key>TableSignature</key>
+					<data>RE1BUg==</data>
 				</dict>
 			</array>
 			<key>Patch</key>
@@ -689,11 +735,11 @@
 					<key>BaseSkip</key>
 					<integer>0</integer>
 					<key>Comment</key>
-					<string>Rename PNLF to XNLF</string>
+					<string>Change PNLF to XNLF</string>
 					<key>Count</key>
 					<integer>0</integer>
 					<key>Enabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>UE5MRg==</data>
 					<key>Limit</key>
@@ -1569,6 +1615,42 @@
 					<true/>
 					<key>ExecutablePath</key>
 					<string>Contents/MacOS/BlueToolFixup</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>BrcmFirmwareData.kext</string>
+					<key>Comment</key>
+					<string>BrcmFirmwareData.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/BrcmFirmwareData</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>Any</string>
+					<key>BundlePath</key>
+					<string>BrcmPatchRAM3.kext</string>
+					<key>Comment</key>
+					<string>BrcmPatchRAM3.kext</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/BrcmPatchRAM3</string>
 					<key>MaxKernel</key>
 					<string></string>
 					<key>MinKernel</key>
