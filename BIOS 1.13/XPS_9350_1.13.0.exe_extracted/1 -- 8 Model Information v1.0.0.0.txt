@@ -1,0 +1,5 @@
+VendorName=Dell Inc.
+OemString=Model_File
+SystemName=XPS 13 9350
+Version=1.13.0
+Model=0704,0704
