@@ -183,7 +183,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
             Offset (0x54)
         }
 
-        // UPSB (up stream port) configuration base
+        // PXSX (up stream port) configuration base
         OperationRegion (UPSM, SystemMemory, 0x00000000EF000000, 0x0550)
         Field (UPSM, DWordAcc, NoLock, Preserve)
         {
@@ -369,7 +369,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                             Break
                         }
                     }
-                    ElseIf ((\_SB.PCI0.RP01.UPSB.AVND == 0xFFFFFFFF))
+                    ElseIf ((\_SB.PCI0.RP01.PXSX.AVND == 0xFFFFFFFF))
                     {
                         Break
                     }
@@ -400,9 +400,9 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
         Name (CTPD, Zero)
         Method (CTBT, 0, Serialized)
         {
-            If ((\_SB.PCI0.RP01.UPSB.AVND != 0xFFFFFFFF))
+            If ((\_SB.PCI0.RP01.PXSX.AVND != 0xFFFFFFFF))
             {
-                Local2 = \_SB.PCI0.RP01.UPSB.CRMW (0x3C, Zero, 0x02, 0x04000000, 0x04000000)
+                Local2 = \_SB.PCI0.RP01.PXSX.CRMW (0x3C, Zero, 0x02, 0x04000000, 0x04000000)
                 If ((Local2 == Zero))
                 {
                     \_SB.PCI0.RP01.CTPD = One
@@ -482,7 +482,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
         */
         Method (TBST, 0, Serialized)
         {
-            Debug = Concatenate ("TB:TBST - MDUV: ", \_SB.PCI0.RP01.UPSB.MDUV)
+            Debug = Concatenate ("TB:TBST - MDUV: ", \_SB.PCI0.RP01.PXSX.MDUV)
             Debug = Concatenate ("TB:TBST - NHI: ", \_SB.PCI0.RP01.NH00)
             Debug = Concatenate ("TB:TBST - Root port: ", \_SB.PCI0.RP01.RPVD)
             Debug = Concatenate ("TB:TBST - Upstream port: ", \_SB.PCI0.RP01.UPVD)
@@ -541,7 +541,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                     Sleep (Arg1)
                     While ((Timer <= Local2))
                     {
-                        If ((\_SB.PCI0.RP01.UPSB.AVND != 0xFFFFFFFF))
+                        If ((\_SB.PCI0.RP01.PXSX.AVND != 0xFFFFFFFF))
                         {
                             Local1 = One
                             Break
@@ -640,89 +640,89 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
             Return (Zero)
         }
 
-        Method (_INI, 0, NotSerialized)
-        {
-            Concatenate("TB:INIT: TBSF - Thunderbolt(TM) SMI Function Number: ", TBSF, Debug)
-            Concatenate("TB:INIT: SOHP - SMI on Hot Plug for TBT devices: ", SOHP, Debug)
-            // Concatenate("TB:INIT: TWIN - TbtWin10Support: ", TWIN, Debug)
-            Concatenate("TB:INIT: GP5F - Gpio filter to detect USB Hotplug event: ", GP5F, Debug)
-            Concatenate("TB:INIT: NOHP - Notify on Hot Plug for TBT devices: ", NOHP, Debug)
-            Concatenate("TB:INIT: TBSE - Thunderbolt(TM) Root port selector: ", TBSE, Debug)
-            Concatenate("TB:INIT: WKFN - WAK Finished: ", WKFN, Debug)
-            Concatenate("TB:INIT: TBTS - Thunderbolt support: ", TBTS, Debug)
-            Concatenate("TB:INIT: TARS - TbtAcpiRemovalSupport: ", TARS, Debug)
-            Concatenate("TB:INIT: FPEN - TbtFrcPwrEn: ", FPEN, Debug)
-            // Concatenate("TB:INIT: FPG1 - TbtFrcPwrGpioNo: ", FPG1, Debug)
-            // Concatenate("TB:INIT: FP1L - TbtFrcPwrGpioLevel: ", FP1L, Debug)
-            // Concatenate("TB:INIT: CPG1 - TbtCioPlugEventGpioNo: ", CPG1, Debug)
-            // Concatenate("TB:INIT: TRWA - Titan Ridge Osup command: ", TRWA, Debug)
-            // Concatenate("TB:INIT: TBOD - Rtd3TbtOffDelay TBT RTD3 Off Delay: ", TBOD, Debug)
-            // Concatenate("TB:INIT: TSXW - TbtSxWakeSwitchLogicEnable Set True if TBT_WAKE_N will be routed to PCH WakeB at Sx entry point. HW logic is required: ", TSXW, Debug)
-            // Concatenate("TB:INIT: RTBT - Enable Rtd3 support for TBT: ", RTBT, Debug)
-            // Concatenate("TB:INIT: RTBC - Enable TBT RTD3 CLKREQ mask: ", RTBC, Debug)
-            // Concatenate("TB:INIT: TBCD - TBT RTD3 CLKREQ mask delay: ", TBCD, Debug)
+//        Method (_INI, 0, NotSerialized)
+//        {
+//            Concatenate("TB:INIT: TBSF - Thunderbolt(TM) SMI Function Number: ", TBSF, Debug)
+//            Concatenate("TB:INIT: SOHP - SMI on Hot Plug for TBT devices: ", SOHP, Debug)
+//            // Concatenate("TB:INIT: TWIN - TbtWin10Support: ", TWIN, Debug)
+//            Concatenate("TB:INIT: GP5F - Gpio filter to detect USB Hotplug event: ", GP5F, Debug)
+//            Concatenate("TB:INIT: NOHP - Notify on Hot Plug for TBT devices: ", NOHP, Debug)
+//            Concatenate("TB:INIT: TBSE - Thunderbolt(TM) Root port selector: ", TBSE, Debug)
+//            Concatenate("TB:INIT: WKFN - WAK Finished: ", WKFN, Debug)
+//            Concatenate("TB:INIT: TBTS - Thunderbolt support: ", TBTS, Debug)
+//            Concatenate("TB:INIT: TARS - TbtAcpiRemovalSupport: ", TARS, Debug)
+//            Concatenate("TB:INIT: FPEN - TbtFrcPwrEn: ", FPEN, Debug)
+//            // Concatenate("TB:INIT: FPG1 - TbtFrcPwrGpioNo: ", FPG1, Debug)
+//            // Concatenate("TB:INIT: FP1L - TbtFrcPwrGpioLevel: ", FP1L, Debug)
+//            // Concatenate("TB:INIT: CPG1 - TbtCioPlugEventGpioNo: ", CPG1, Debug)
+//            // Concatenate("TB:INIT: TRWA - Titan Ridge Osup command: ", TRWA, Debug)
+//            // Concatenate("TB:INIT: TBOD - Rtd3TbtOffDelay TBT RTD3 Off Delay: ", TBOD, Debug)
+//            // Concatenate("TB:INIT: TSXW - TbtSxWakeSwitchLogicEnable Set True if TBT_WAKE_N will be routed to PCH WakeB at Sx entry point. HW logic is required: ", TSXW, Debug)
+//            // Concatenate("TB:INIT: RTBT - Enable Rtd3 support for TBT: ", RTBT, Debug)
+//            // Concatenate("TB:INIT: RTBC - Enable TBT RTD3 CLKREQ mask: ", RTBC, Debug)
+//            // Concatenate("TB:INIT: TBCD - TBT RTD3 CLKREQ mask delay: ", TBCD, Debug)
 
-            Concatenate("TB:INIT: USBP - Allow USB2 PHY Core Power Gating (ALLOW_USB2_CORE_PG): ", USBP, Debug)
-            Concatenate("TB:INIT: UWAB - USB2 Workaround Available: ", UWAB, Debug)
-            // Concatenate("TB:INIT: USME - Disables HS01/HS01@XHC2 & Switches SSP1/SSP2@XHC2 -> 0x0A (maybe like U2OP?) ???: ", USME, Debug)
-            // Concatenate("TB:INIT: USTC - USBC-if enabled (UBTC) ???: ", USTC, Debug)
-            // Concatenate("TB:INIT: TBAS - Enables HS03/04@XHC1 ???: ", TBAS, Debug)
-            Concatenate("TB:INIT: MMRP(): ", MMRP(), Debug)
+//            Concatenate("TB:INIT: USBP - Allow USB2 PHY Core Power Gating (ALLOW_USB2_CORE_PG): ", USBP, Debug)
+//            Concatenate("TB:INIT: UWAB - USB2 Workaround Available: ", UWAB, Debug)
+//            // Concatenate("TB:INIT: USME - Disables HS01/HS01@XHC2 & Switches SSP1/SSP2@XHC2 -> 0x0A (maybe like U2OP?) ???: ", USME, Debug)
+//            // Concatenate("TB:INIT: USTC - USBC-if enabled (UBTC) ???: ", USTC, Debug)
+//            // Concatenate("TB:INIT: TBAS - Enables HS03/04@XHC1 ???: ", TBAS, Debug)
+//            Concatenate("TB:INIT: MMRP(): ", MMRP(), Debug)
 
-            Debug = "TB:INIT: TB enabled"
-            Debug = "TB:INIT: TB native mode enabled"
-            Debug = "TB:INIT - Save Ridge Config on Boot ICM"
+//            Debug = "TB:INIT: TB enabled"
+//            Debug = "TB:INIT: TB native mode enabled"
+//            Debug = "TB:INIT - Save Ridge Config on Boot ICM"
 
-            R020 = R_20 /* \_SB.PCI0.RP01.R_20 */
-            R024 = R_24 /* \_SB.PCI0.RP01.R_24 */
-            R028 = R_28 /* \_SB.PCI0.RP01.R_28 */
-            R02C = R_2C /* \_SB.PCI0.RP01.R_2C */
+//            R020 = R_20 /* \_SB.PCI0.RP01.R_20 */
+//            R024 = R_24 /* \_SB.PCI0.RP01.R_24 */
+//            R028 = R_28 /* \_SB.PCI0.RP01.R_28 */
+//            R02C = R_2C /* \_SB.PCI0.RP01.R_2C */
 
-            R118 = UP18 /* \_SB.PCI0.RP01.UP18 */
-            R119 = UP19 /* \_SB.PCI0.RP01.UP19 */
-            R11A = UP1A /* \_SB.PCI0.RP01.UP1A */
-            R11C = UP1C /* \_SB.PCI0.RP01.UP1C */
-            R120 = UP20 /* \_SB.PCI0.RP01.UP20 */
-            R124 = UP24 /* \_SB.PCI0.RP01.UP24 */
-            R128 = UP28 /* \_SB.PCI0.RP01.UP28 */
-            R12C = UP2C /* \_SB.PCI0.RP01.UP2C */
+//            R118 = UP18 /* \_SB.PCI0.RP01.UP18 */
+//            R119 = UP19 /* \_SB.PCI0.RP01.UP19 */
+//            R11A = UP1A /* \_SB.PCI0.RP01.UP1A */
+//            R11C = UP1C /* \_SB.PCI0.RP01.UP1C */
+//            R120 = UP20 /* \_SB.PCI0.RP01.UP20 */
+//            R124 = UP24 /* \_SB.PCI0.RP01.UP24 */
+//            R128 = UP28 /* \_SB.PCI0.RP01.UP28 */
+//            R12C = UP2C /* \_SB.PCI0.RP01.UP2C */
 
-            R218 = DP18 /* \_SB.PCI0.RP01.DP18 */
-            R219 = DP19 /* \_SB.PCI0.RP01.DP19 */
-            R21A = DP1A /* \_SB.PCI0.RP01.DP1A */
-            R21C = DP1C /* \_SB.PCI0.RP01.DP1C */
-            R220 = DP20 /* \_SB.PCI0.RP01.DP20 */
-            R224 = DP24 /* \_SB.PCI0.RP01.DP24 */
-            R228 = DP28 /* \_SB.PCI0.RP01.DP28 */
+//            R218 = DP18 /* \_SB.PCI0.RP01.DP18 */
+//            R219 = DP19 /* \_SB.PCI0.RP01.DP19 */
+//            R21A = DP1A /* \_SB.PCI0.RP01.DP1A */
+//            R21C = DP1C /* \_SB.PCI0.RP01.DP1C */
+//            R220 = DP20 /* \_SB.PCI0.RP01.DP20 */
+//            R224 = DP24 /* \_SB.PCI0.RP01.DP24 */
+//            R228 = DP28 /* \_SB.PCI0.RP01.DP28 */
 
-            R318 = D318 /* \_SB.PCI0.RP01.D318 */
-            R319 = D319 /* \_SB.PCI0.RP01.D319 */
-            R31A = D31A /* \_SB.PCI0.RP01.D31A */
-            R31C = D31C /* \_SB.PCI0.RP01.D31C */
-            R320 = D320 /* \_SB.PCI0.RP01.D320 */
-            R324 = D324 /* \_SB.PCI0.RP01.D324 */
-            R328 = D328 /* \_SB.PCI0.RP01.D328 */
-            R32C = D32C /* \_SB.PCI0.RP01.D32C */
+//            R318 = D318 /* \_SB.PCI0.RP01.D318 */
+//            R319 = D319 /* \_SB.PCI0.RP01.D319 */
+//            R31A = D31A /* \_SB.PCI0.RP01.D31A */
+//            R31C = D31C /* \_SB.PCI0.RP01.D31C */
+//            R320 = D320 /* \_SB.PCI0.RP01.D320 */
+//            R324 = D324 /* \_SB.PCI0.RP01.D324 */
+//            R328 = D328 /* \_SB.PCI0.RP01.D328 */
+//            R32C = D32C /* \_SB.PCI0.RP01.D32C */
 
-            R418 = D418 /* \_SB.PCI0.RP01.D418 */
-            R419 = D419 /* \_SB.PCI0.RP01.D419 */
-            R41A = D41A /* \_SB.PCI0.RP01.D41A */
-            R41C = D41C /* \_SB.PCI0.RP01.D41C */
-            R420 = D420 /* \_SB.PCI0.RP01.D420 */
-            R424 = D424 /* \_SB.PCI0.RP01.D424 */
-            R428 = D428 /* \_SB.PCI0.RP01.D428 */
-            R42C = D42C /* \_SB.PCI0.RP01.D42C */
+//            R418 = D418 /* \_SB.PCI0.RP01.D418 */
+//            R419 = D419 /* \_SB.PCI0.RP01.D419 */
+//            R41A = D41A /* \_SB.PCI0.RP01.D41A */
+//            R41C = D41C /* \_SB.PCI0.RP01.D41C */
+//            R420 = D420 /* \_SB.PCI0.RP01.D420 */
+//            R424 = D424 /* \_SB.PCI0.RP01.D424 */
+//            R428 = D428 /* \_SB.PCI0.RP01.D428 */
+//            R42C = D42C /* \_SB.PCI0.RP01.D42C */
 
-            RVES = DVES /* \_SB.PCI0.RP01.DVES */
+//            RVES = DVES /* \_SB.PCI0.RP01.DVES */
 
-            RH10 = NH10 /* \_SB.PCI0.RP01.NH10 */
-            RH14 = NH14 /* \_SB.PCI0.RP01.NH14 */
-            Debug = "TB:INIT - Store Complete"
+//            RH10 = NH10 /* \_SB.PCI0.RP01.NH10 */
+//            RH14 = NH14 /* \_SB.PCI0.RP01.NH14 */
+//            Debug = "TB:INIT - Store Complete"
 
-            Sleep (One)
+//            Sleep (One)
 
-            ICMD ()
-        }
+//            ICMD ()
+//        }
 
         /**
         * ICM Disable
@@ -1070,15 +1070,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
 
         Scope (PXSX)
         {
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                Return (Zero)
-            }
-        }
-
-        Device (UPSB)
-        {
-            Name (_ADR, Zero)  // _ADR: Address
             Name (MDUV, One) // plug status
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -1140,7 +1131,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
 
             Method (_BBN, 0, NotSerialized)  // _BBN: BIOS Bus Number
             {
-                Return (SECB) /* \_SB_.PCI0.RP01.UPSB.SECB */
+                Return (SECB) /* \_SB_.PCI0.RP01.PXSX.SECB */
             }
 
             Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
@@ -1154,7 +1145,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
              */
             Method (AMPE, 0, Serialized)
             {
-                Notify (\_SB.PCI0.RP01.UPSB.DSB0.NHI0, Zero) // Bus Check
+                Notify (\_SB.PCI0.RP01.PXSX.DSB0.NHI0, Zero) // Bus Check
             }
 
             Method (PCED, 0, Serialized)
@@ -1210,7 +1201,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                         Sleep (0x78)
                         While ((Timer <= Local5))
                         {
-                            If ((\_SB.PCI0.RP01.UPSB.AVND != 0xFFFFFFFF))
+                            If ((\_SB.PCI0.RP01.PXSX.AVND != 0xFFFFFFFF))
                             {
                                 Break
                             }
@@ -1246,7 +1237,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                 \_SB.PCI0.RP01.PRSR = Zero
                 While ((Timer <= Local5))
                 {
-                    If ((\_SB.PCI0.RP01.UPSB.AVND != 0xFFFFFFFF))
+                    If ((\_SB.PCI0.RP01.PXSX.AVND != 0xFFFFFFFF))
                     {
                         Break
                     }
@@ -1258,16 +1249,16 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                 {
                     If ((\_SB.PCI0.RP01.SSPD == 0x03))
                     {
-                        If ((\_SB.PCI0.RP01.UPSB.SSPD == 0x03))
+                        If ((\_SB.PCI0.RP01.PXSX.SSPD == 0x03))
                         {
                             If ((\_SB.PCI0.RP01.TSPD != 0x03))
                             {
                                 \_SB.PCI0.RP01.TSPD = 0x03
                             }
 
-                            If ((\_SB.PCI0.RP01.UPSB.TSPD != 0x03))
+                            If ((\_SB.PCI0.RP01.PXSX.TSPD != 0x03))
                             {
-                                \_SB.PCI0.RP01.UPSB.TSPD = 0x03
+                                \_SB.PCI0.RP01.PXSX.TSPD = 0x03
                             }
 
                             \_SB.PCI0.RP01.LRTN = One
@@ -1276,7 +1267,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                             {
                                 If ((\_SB.PCI0.RP01.LACR == Zero))
                                 {
-                                    If (((\_SB.PCI0.RP01.LTRN != One) && (\_SB.PCI0.RP01.UPSB.AVND != 0xFFFFFFFF)))
+                                    If (((\_SB.PCI0.RP01.LTRN != One) && (\_SB.PCI0.RP01.PXSX.AVND != 0xFFFFFFFF)))
                                     {
                                         \_SB.PCI0.RP01.PCIA = One
                                         Local1 = One
@@ -1284,7 +1275,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                                     }
                                 }
                                 ElseIf ((((\_SB.PCI0.RP01.LTRN != One) && (\_SB.PCI0.RP01.LACT == One)) &&
-                                    (\_SB.PCI0.RP01.UPSB.AVND != 0xFFFFFFFF)))
+                                    (\_SB.PCI0.RP01.PXSX.AVND != 0xFFFFFFFF)))
                                 {
                                     \_SB.PCI0.RP01.PCIA = One
                                     Local1 = One
@@ -1315,8 +1306,8 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
             Method (_PS0, 0, Serialized)  // _PS0: Power State 0
             {
                 PCED ()
-                \_SB.PCI0.RP01.UPSB.CRMW (0x013E, Zero, 0x02, 0x0200, 0x0200)
-                \_SB.PCI0.RP01.UPSB.CRMW (0x023E, Zero, 0x02, 0x0200, 0x0200)
+                \_SB.PCI0.RP01.PXSX.CRMW (0x013E, Zero, 0x02, 0x0200, 0x0200)
+                \_SB.PCI0.RP01.PXSX.CRMW (0x023E, Zero, 0x02, 0x0200, 0x0200)
             }
 
             Method (_PS3, 0, Serialized)  // _PS3: Power State 3
@@ -1372,7 +1363,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
 
                 If ((Local1 == Zero))
                 {
-                    Local1 = TMOT /* \_SB_.PCI0.RP01.UPSB.TMOT */
+                    Local1 = TMOT /* \_SB_.PCI0.RP01.PXSX.TMOT */
                 }
 
                 Return (Local1)
@@ -1405,7 +1396,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
 
                 If ((Local1 == Zero))
                 {
-                    Local1 = TMOT /* \_SB_.PCI0.RP01.UPSB.TMOT */
+                    Local1 = TMOT /* \_SB_.PCI0.RP01.PXSX.TMOT */
                 }
 
                 If ((Local1 == Zero))
@@ -1429,7 +1420,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
             Method (CRMW, 5, Serialized)
             {
                 Local1 = One
-                If ((\_SB.PCI0.RP01.UPSB.AVND != 0xFFFFFFFF))
+                If ((\_SB.PCI0.RP01.PXSX.AVND != 0xFFFFFFFF))
                 {
                     Local3 = Zero
                     While ((Local3 <= 0x04))
@@ -1523,38 +1514,38 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                 Name (PCIA, One)
                 Method (PCEU, 0, Serialized)
                 {
-                    \_SB.PCI0.RP01.UPSB.DSB0.PRSR = Zero
-                    If ((\_SB.PCI0.RP01.UPSB.DSB0.PSTA != Zero))
+                    \_SB.PCI0.RP01.PXSX.DSB0.PRSR = Zero
+                    If ((\_SB.PCI0.RP01.PXSX.DSB0.PSTA != Zero))
                     {
-                        \_SB.PCI0.RP01.UPSB.DSB0.PRSR = One
-                        \_SB.PCI0.RP01.UPSB.DSB0.PSTA = Zero
+                        \_SB.PCI0.RP01.PXSX.DSB0.PRSR = One
+                        \_SB.PCI0.RP01.PXSX.DSB0.PSTA = Zero
                     }
 
-                    If ((\_SB.PCI0.RP01.UPSB.DSB0.LDIS == One))
+                    If ((\_SB.PCI0.RP01.PXSX.DSB0.LDIS == One))
                     {
-                        \_SB.PCI0.RP01.UPSB.DSB0.PRSR = One
-                        \_SB.PCI0.RP01.UPSB.DSB0.LDIS = Zero
+                        \_SB.PCI0.RP01.PXSX.DSB0.PRSR = One
+                        \_SB.PCI0.RP01.PXSX.DSB0.LDIS = Zero
                     }
                 }
 
                 Method (PCDA, 0, Serialized)
                 {
-                    If ((\_SB.PCI0.RP01.UPSB.DSB0.POFF () != Zero))
+                    If ((\_SB.PCI0.RP01.PXSX.DSB0.POFF () != Zero))
                     {
-                        \_SB.PCI0.RP01.UPSB.DSB0.PCIA = Zero
-                        \_SB.PCI0.RP01.UPSB.DSB0.PSTA = 0x03
-                        \_SB.PCI0.RP01.UPSB.DSB0.LDIS = One
+                        \_SB.PCI0.RP01.PXSX.DSB0.PCIA = Zero
+                        \_SB.PCI0.RP01.PXSX.DSB0.PSTA = 0x03
+                        \_SB.PCI0.RP01.PXSX.DSB0.LDIS = One
                         Local5 = (Timer + 0x00989680)
                         While ((Timer <= Local5))
                         {
-                            If ((\_SB.PCI0.RP01.UPSB.DSB0.LACR == One))
+                            If ((\_SB.PCI0.RP01.PXSX.DSB0.LACR == One))
                             {
-                                If ((\_SB.PCI0.RP01.UPSB.DSB0.LACT == Zero))
+                                If ((\_SB.PCI0.RP01.PXSX.DSB0.LACT == Zero))
                                 {
                                     Break
                                 }
                             }
-                            ElseIf ((\_SB.PCI0.RP01.UPSB.DSB0.NHI0.AVND == 0xFFFFFFFF))
+                            ElseIf ((\_SB.PCI0.RP01.PXSX.DSB0.NHI0.AVND == 0xFFFFFFFF))
                             {
                                 Break
                             }
@@ -1569,7 +1560,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                     {
                     }
 
-                    \_SB.PCI0.RP01.UPSB.DSB0.IIP3 = One
+                    \_SB.PCI0.RP01.PXSX.DSB0.IIP3 = One
                 }
 
                 Method (POFF, 0, Serialized)
@@ -2046,38 +2037,38 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                 Name (PCIA, One)
                 Method (PCEU, 0, Serialized)
                 {
-                    \_SB.PCI0.RP01.UPSB.DSB2.PRSR = Zero
-                    If ((\_SB.PCI0.RP01.UPSB.DSB2.PSTA != Zero))
+                    \_SB.PCI0.RP01.PXSX.DSB2.PRSR = Zero
+                    If ((\_SB.PCI0.RP01.PXSX.DSB2.PSTA != Zero))
                     {
-                        \_SB.PCI0.RP01.UPSB.DSB2.PRSR = One
-                        \_SB.PCI0.RP01.UPSB.DSB2.PSTA = Zero
+                        \_SB.PCI0.RP01.PXSX.DSB2.PRSR = One
+                        \_SB.PCI0.RP01.PXSX.DSB2.PSTA = Zero
                     }
 
-                    If ((\_SB.PCI0.RP01.UPSB.DSB2.LDIS == One))
+                    If ((\_SB.PCI0.RP01.PXSX.DSB2.LDIS == One))
                     {
-                        \_SB.PCI0.RP01.UPSB.DSB2.PRSR = One
-                        \_SB.PCI0.RP01.UPSB.DSB2.LDIS = Zero
+                        \_SB.PCI0.RP01.PXSX.DSB2.PRSR = One
+                        \_SB.PCI0.RP01.PXSX.DSB2.LDIS = Zero
                     }
                 }
 
                 Method (PCDA, 0, Serialized)
                 {
-                    If ((\_SB.PCI0.RP01.UPSB.DSB2.POFF () != Zero))
+                    If ((\_SB.PCI0.RP01.PXSX.DSB2.POFF () != Zero))
                     {
-                        \_SB.PCI0.RP01.UPSB.DSB2.PCIA = Zero
-                        \_SB.PCI0.RP01.UPSB.DSB2.PSTA = 0x03
-                        \_SB.PCI0.RP01.UPSB.DSB2.LDIS = One
+                        \_SB.PCI0.RP01.PXSX.DSB2.PCIA = Zero
+                        \_SB.PCI0.RP01.PXSX.DSB2.PSTA = 0x03
+                        \_SB.PCI0.RP01.PXSX.DSB2.LDIS = One
                         Local5 = (Timer + 0x00989680)
                         While ((Timer <= Local5))
                         {
-                            If ((\_SB.PCI0.RP01.UPSB.DSB2.LACR == One))
+                            If ((\_SB.PCI0.RP01.PXSX.DSB2.LACR == One))
                             {
-                                If ((\_SB.PCI0.RP01.UPSB.DSB2.LACT == Zero))
+                                If ((\_SB.PCI0.RP01.PXSX.DSB2.LACT == Zero))
                                 {
                                     Break
                                 }
                             }
-                            ElseIf ((\_SB.PCI0.RP01.UPSB.DSB2.XHC2.AVND == 0xFFFFFFFF))
+                            ElseIf ((\_SB.PCI0.RP01.PXSX.DSB2.XHC2.AVND == 0xFFFFFFFF))
                             {
                                 Break
                             }
@@ -2092,7 +2083,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                     {
                     }
 
-                    \_SB.PCI0.RP01.UPSB.DSB2.IIP3 = One
+                    \_SB.PCI0.RP01.PXSX.DSB2.IIP3 = One
                 }
 
                 Method (POFF, 0, Serialized)
@@ -2149,25 +2140,25 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                         \_SB.PCI0.RP01.GXCI = One
                         If ((\_SB.PCI0.RP01.UGIO () != Zero))
                         {
-                            \_SB.PCI0.RP01.UPSB.DSB2.PRSR = One
+                            \_SB.PCI0.RP01.PXSX.DSB2.PRSR = One
                         }
 
                         Local0 = Zero
                         Local1 = Zero
                         Local5 = (Timer + 0x00989680)
-                        If ((\_SB.PCI0.RP01.UPSB.DSB2.PRSR != Zero))
+                        If ((\_SB.PCI0.RP01.PXSX.DSB2.PRSR != Zero))
                         {
                             Local5 = (Timer + 0x00989680)
                             While ((Timer <= Local5))
                             {
-                                If ((\_SB.PCI0.RP01.UPSB.DSB2.LACR == Zero))
+                                If ((\_SB.PCI0.RP01.PXSX.DSB2.LACR == Zero))
                                 {
-                                    If ((\_SB.PCI0.RP01.UPSB.DSB2.LTRN != One))
+                                    If ((\_SB.PCI0.RP01.PXSX.DSB2.LTRN != One))
                                     {
                                         Break
                                     }
                                 }
-                                ElseIf (((\_SB.PCI0.RP01.UPSB.DSB2.LTRN != One) && (\_SB.PCI0.RP01.UPSB.DSB2.LACT == One)))
+                                ElseIf (((\_SB.PCI0.RP01.PXSX.DSB2.LTRN != One) && (\_SB.PCI0.RP01.PXSX.DSB2.LACT == One)))
                                 {
                                     Break
                                 }
@@ -2178,19 +2169,19 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                             Sleep (0x96)
                         }
 
-                        \_SB.PCI0.RP01.UPSB.DSB2.PRSR = Zero
+                        \_SB.PCI0.RP01.PXSX.DSB2.PRSR = Zero
                         While ((Timer <= Local5))
                         {
-                            If ((\_SB.PCI0.RP01.UPSB.DSB2.XHC2.AVND != 0xFFFFFFFF))
+                            If ((\_SB.PCI0.RP01.PXSX.DSB2.XHC2.AVND != 0xFFFFFFFF))
                             {
-                                \_SB.PCI0.RP01.UPSB.DSB2.PCIA = One
+                                \_SB.PCI0.RP01.PXSX.DSB2.PCIA = One
                                 Break
                             }
 
                             Sleep (0x0A)
                         }
 
-                        \_SB.PCI0.RP01.UPSB.DSB2.IIP3 = Zero
+                        \_SB.PCI0.RP01.PXSX.DSB2.IIP3 = Zero
                     }
 
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
