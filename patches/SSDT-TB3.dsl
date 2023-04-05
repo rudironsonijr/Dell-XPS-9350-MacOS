@@ -20,7 +20,14 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
     {
         Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
         {
-            Return (One)
+            If (_OSI ("Darwin"))
+            {
+                Return (One)
+            }
+            Else 
+            {
+                Return (Zero)
+            }
         }
 
         Method (_STA, 0, NotSerialized)  // _STA: Status
@@ -49,7 +56,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                     {
                         Return (Buffer (One)
                         {
-                             0x03                                             // .
+                            0x03                                             // .
                         })
                     }
 
@@ -79,7 +86,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                     {
                         Return (Buffer (One)
                         {
-                             0x03                                             // .
+                            0x03                                             // .
                         })
                     }
 
@@ -89,7 +96,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
                             One,
                             Buffer (One)
                             {
-                                 0x00                                             // .
+                                0x00                                             // .
                             }
                         }
                     Return (Local0)

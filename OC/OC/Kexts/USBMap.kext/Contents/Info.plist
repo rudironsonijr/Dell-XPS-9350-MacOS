@@ -71,7 +71,7 @@
 					</dict>
 					<key>HS04</key>
 					<dict>
-						<key>port</key>
+						<key>#port</key>
 						<data>
 						BAAAAA==
 						</data>
