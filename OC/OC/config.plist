@@ -120,7 +120,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>Attempt to fix TB3 and USB-C, unreliable at this moment</string>
+                    <string>Attempt to fix TB3 and USB-C,  this is a WIP</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -370,7 +370,7 @@
                     <key>BaseSkip</key>
                     <integer>0</integer>
                     <key>Comment</key>
-                    <string>Rename _RMV to XRMV in RP01.PXSX and use with SSDT-TYPC.aml for USB-C hot plug support</string>
+                    <string>Rename _RMV to XRMV in RP01.PXSX and use with SSDT-TB3.aml</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -400,7 +400,7 @@
                     <key>BaseSkip</key>
                     <integer>0</integer>
                     <key>Comment</key>
-                    <string>Rename _PS0 to XPS0 in RP01.PXSX and use with SSDT-TYPC.aml for USB-C hot plug support</string>
+                    <string>Rename _PS0 to XPS0 in RP01.PXSX and use with SSDT-TB3.aml</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -430,7 +430,7 @@
                     <key>BaseSkip</key>
                     <integer>0</integer>
                     <key>Comment</key>
-                    <string>Rename _PS3 to XPS3 in RP01.PXSX and use with SSDT-TYPC.aml for USB-C hot plug support</string>
+                    <string>Rename _PS3 to XPS3 in RP01.PXSX and use with SSDT-TB3.aml</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -460,7 +460,7 @@
                     <key>BaseSkip</key>
                     <integer>0</integer>
                     <key>Comment</key>
-                    <string>Rename _INI to XINI in RP01.PXSX and use with SSDT-TYPC.aml for USB-C hot plug support</string>
+                    <string>Rename _INI to XINI in RP01.PXSX and use with SSDT-TB3.aml</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -814,6 +814,36 @@
                     <key>TableSignature</key>
                     <data></data>
                 </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>Change INIT to XNIT (TB3)</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Find</key>
+                    <data></data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
+                    <data></data>
+                    <key>Replace</key>
+                    <data></data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data></data>
+                </dict>
             </array>
             <key>Quirks</key>
             <dict>
@@ -899,7 +929,7 @@
                     <key>AAPL,slot-name</key>
                     <string>Internal@0,20,0</string>
                     <key>acpi-wake-type</key>
-                    <data>AQAAAA==</data>
+                    <data>AQ==</data>
                     <key>device_type</key>
                     <string>USB controller</string>
                     <key>model</key>
@@ -1082,14 +1112,14 @@
                 <dict>
                     <key>AAPL,slot-name</key>
                     <string>Internal@0,31,3</string>
+                    <key>device-id</key>
+                    <data>cZ0AAA==</data>
                     <key>device_type</key>
                     <string>Audio device</string>
                     <key>hda-gfx</key>
                     <string>onboard-1</string>
                     <key>layout-id</key>
-                    <data>
-                    DQAAAA==
-                    </data>
+                    <data>DQAAAA==</data>
                     <key>model</key>
                     <string>Sunrise Point-LP HD Audio</string>
                 </dict>
@@ -1105,140 +1135,73 @@
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
                     <key>AAPL,GfxYTile</key>
-                    <data>
-                    AQAAAA==
-                    </data>
+                    <data>AQAAAA==</data>
                     <key>AAPL,ig-platform-id</key>
-                    <data>
-                    AAAWWQ==
-                    </data>
+                    <data>AAAWWQ==</data>
                     <key>AAPL,slot-name</key>
                     <string>Internal@0,2,0</string>
                     <key>AAPL00,override-no-connect</key>
-                    <data>
-                    AP///////wBNEHycAAAAAB4ZAQSlHRFgDm+xp1VMniUM
-                    UFQAAAABAQEBAQEBAQEBAQEBAQEBzZGAoMAINHAwIDUA
-                    JqUQAAAYpHSAoMAINHAwIDUAJqUQAAAYAAAA/gBSWE40
-                    OYFMUTEzM1oxAAAAAAACQQMoABIAAAsBCiAgADI=
-                    </data>
+                    <data>AP///////wBNEHycAAAAAB4ZAQSlHRFgDm+xp1VMniUMUFQAAAABAQEBAQEBAQEBAQEBAQEBzZGAoMAINHAwIDUAJqUQAAAYpHSAoMAINHAwIDUAJqUQAAAYAAAA/gBSWE40OYFMUTEzM1oxAAAAAAACQQMoABIAAAsBCiAgADI=</data>
                     <key>device-id</key>
-                    <data>
-                    G1kAAA==
-                    </data>
+                    <data>G1kAAA==</data>
                     <key>device_type</key>
                     <string>VGA compatible controller</string>
                     <key>enable-lspcon-support</key>
-                    <data>
-                    AQAAAA==
-                    </data>
+                    <data>AQAAAA==</data>
                     <key>framebuffer-con0-busid</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>framebuffer-con0-enable</key>
-                    <data>
-                    AQAAAA==
-                    </data>
+                    <data>AQAAAA==</data>
                     <key>framebuffer-con0-flags</key>
-                    <data>
-                    mAAAAA==
-                    </data>
+                    <data>mAAAAA==</data>
                     <key>framebuffer-con0-index</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>framebuffer-con0-pipe</key>
-                    <data>
-                    CAAAAA==
-                    </data>
+                    <data>CAAAAA==</data>
                     <key>framebuffer-con0-type</key>
-                    <data>
-                    AgAAAA==
-                    </data>
+                    <data>AgAAAA==</data>
                     <key>framebuffer-con1-busid</key>
-                    <data>
-                    BQAAAA==
-                    </data>
+                    <data>BQAAAA==</data>
                     <key>framebuffer-con1-enable</key>
-                    <data>
-                    AQAAAA==
-                    </data>
+                    <data>AQAAAA==</data>
                     <key>framebuffer-con1-flags</key>
-                    <data>
-                    hwEAAA==
-                    </data>
+                    <data>hwEAAA==</data>
                     <key>framebuffer-con1-has-lspcon</key>
-                    <data>
-                    AQAAAA==
-                    </data>
+                    <data>AQAAAA==</data>
                     <key>framebuffer-con1-index</key>
-                    <data>
-                    AQAAAA==
-                    </data>
+                    <data>AQAAAA==</data>
                     <key>framebuffer-con1-pipe</key>
-                    <data>
-                    CQAAAA==
-                    </data>
+                    <data>CQAAAA==</data>
                     <key>framebuffer-con1-preferred-lspcon-mode</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>framebuffer-con1-type</key>
-                    <data>
-                    AAgAAA==
-                    </data>
+                    <data>AAgAAA==</data>
                     <key>framebuffer-con2-busid</key>
-                    <data>
-                    BAAAAA==
-                    </data>
+                    <data>BAAAAA==</data>
                     <key>framebuffer-con2-enable</key>
-                    <data>
-                    AQAAAA==
-                    </data>
+                    <data>AQAAAA==</data>
                     <key>framebuffer-con2-flags</key>
-                    <data>
-                    hwEAAA==
-                    </data>
+                    <data>hwEAAA==</data>
                     <key>framebuffer-con2-index</key>
-                    <data>
-                    AgAAAA==
-                    </data>
+                    <data>AgAAAA==</data>
                     <key>framebuffer-con2-pipe</key>
-                    <data>
-                    CgAAAA==
-                    </data>
+                    <data>CgAAAA==</data>
                     <key>framebuffer-con2-type</key>
-                    <data>
-                    AAgAAA==
-                    </data>
+                    <data>AAgAAA==</data>
                     <key>framebuffer-con3-busid</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>framebuffer-con3-enable</key>
-                    <data>
-                    AQAAAA==
-                    </data>
+                    <data>AQAAAA==</data>
                     <key>framebuffer-con3-flags</key>
-                    <data>
-                    IAAAAA==
-                    </data>
+                    <data>IAAAAA==</data>
                     <key>framebuffer-con3-index</key>
-                    <data>
-                    /////w==
-                    </data>
+                    <data>/////w==</data>
                     <key>framebuffer-con3-pipe</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>framebuffer-con3-type</key>
-                    <data>
-                    AQAAAA==
-                    </data>
+                    <data>AQAAAA==</data>
                     <key>framebuffer-patch-enable</key>
-                    <data>
-                    AQAAAA==
-                    </data>
+                    <data>AQAAAA==</data>
                     <key>hda-gfx</key>
                     <string>onboard-1</string>
                     <key>model</key>
@@ -1337,24 +1300,6 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>SMCSuperIO.kext</string>
-                    <key>Comment</key>
-                    <string>V1.3.1 | SMCSuperIO.kext</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/SMCSuperIO</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
                     <string>SMCDellSensors.kext</string>
                     <key>Comment</key>
                     <string>V1.3.1 | SMCDellSensors.kext</string>
@@ -1416,6 +1361,24 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/HibernationFixup</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>USBMap.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0 | USBMap.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string></string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -1625,6 +1588,24 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
+                    <string>BlueToolFixup.kext</string>
+                    <key>Comment</key>
+                    <string>V2.6.6</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/BlueToolFixup</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
                     <string>BrcmFirmwareData.kext</string>
                     <key>Comment</key>
                     <string>V2.6.6 | BrcmFirmwareData.kext</string>
@@ -1647,7 +1628,7 @@
                     <key>Comment</key>
                     <string>V2.6.6 | BrcmPatchRAM3.kext</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/BrcmPatchRAM3</string>
                     <key>MaxKernel</key>
@@ -1733,24 +1714,6 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>USBMap.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0 | USBMap.kext</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string></string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
                     <string>ECEnabler.kext</string>
                     <key>Comment</key>
                     <string>V1.0.3 | ECEnabler.kext</string>
@@ -1758,24 +1721,6 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/ECEnabler</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>BlueToolFixup.kext</string>
-                    <key>Comment</key>
-                    <string>V2.6.6</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/BlueToolFixup</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -1809,7 +1754,7 @@
                     <key>Comment</key>
                     <string>V1.1.4</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/FeatureUnlock</string>
                     <key>MaxKernel</key>
