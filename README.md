@@ -1,6 +1,7 @@
 # OpenCore Configuration for Dell XPS 15 9350
 
 ## UEFI BIOS Variables Setup
+
 ### Desired changes
 | Variable                                 | Offset | Default         | Desired         | Comment |
 |------------------------------------------|--------|-----------------|-----------------|---------|
@@ -23,10 +24,26 @@
 | GPIO3 Force Pwr                          | 0xFF2  | N/A             | 0x00 (Disabled) |         |
 
 ### Needs more testing
-| Variable                                 | Offset | Default         | Desired         | Comment |
-|------------------------------------------|--------|-----------------|-----------------|---------|
-| Skip PCI OptionRom                       | 0x1003 | 0x00            | 0x00            |         |
-| SW SMI on TBT hot-plug                   | 0x47A  | 0x01 (Enabled)  | 0x01            |         |
+| Variable               | Offset | Default         | Desired         | Comment |
+|------------------------|--------|-----------------|-----------------|---------|
+| Skip PCI OptionRom     | 0x1003 | 0x00 (Disabled) | 0x00 (Disabled) |         |
+| SW SMI on TBT hot-plug | 0x47A  | 0x01 (Enabled)  | 0x01 (Enabled)  |         |
+
+
+### Potential fixes for Thermal and Power Throttling
+| Variable                                                | Offset | Default                          | Desired                  | Comment |
+|---------------------------------------------------------|--------|----------------------------------|--------------------------|---------|
+| Package Power Limit MSR Lock                            | 0xF6   | 0x00 (Disabled)                  | 0x00 (Disabled)          |         |
+| Overclocking lock                                       | 0x183  | 0x01 (Enabled)                   | 0x00 (Disabled)          |         |
+| Boot performance mode                                   | 0xD9   | 0x01 (Max Non-Turbo Performance) | 0x02 (Turbo Performance) |         |
+| Intel(R) Speed Shift Technology                         | 0xD8   | 0x00 (Disabled)                  | 0x01 (Enabled)           |         |
+| Intel(R) SpeedStep(tm)                                  | 0xD7   | 0x01 (Enabled)                   | 0x01 (Enabled)           |         |
+| Turbo Mode                                              | 0xDC   | 0x01 (Enabled)                   | 0x01 (Enabled)           |         |
+| Package Power Limit MSR Lock                            | 0xF6   | 0x00 (Disabled)                  | 0x00 (Disabled)          |         |
+| Configurable TDP Lock                                   | 0x10B  | 0x01 (Enabled)                   | 0x00 (Disabled)          |         |
+| Enable/Disable Intel Dynamic Platform Thermal Framework | 0x23E  | 0x00 (Disabled)                  | 0x00 (Disabled)          |         |
+| Enable/Disable Intel Low Power Mode                     | 0x279  | 0x01 (Enabled)                   | 0x00 (Disabled)          |         |
+| Enable/Disable the Power Policy.                        | 0x2AF  | 0x00 (Disabled)                  | 0x00 (Disabled)          |         |
 
 ## ACPI Debug
 
