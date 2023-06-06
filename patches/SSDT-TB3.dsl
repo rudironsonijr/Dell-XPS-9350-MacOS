@@ -8,12 +8,445 @@
  */
 DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
 {
-    External (_SB_.PCI0.RP01, DeviceObj)
     External (_SB_.PCI0.RP01.PXSX, DeviceObj)
 
-    Scope (\_SB.PCI0.RP01)
+    Method (RWAK, 1, Serialized)
     {
-        Name (RTBT, One)
+        P8XH (One, 0xAB)
+        ADBG ("_WAK")
+        \_SB.PCI0.GEXP.INVC ()
+        If ((S0ID == One))
+        {
+            \_SB.SCGE = One
+        }
+
+        If (NEXP)
+        {
+            If ((OSCC & 0x02))
+            {
+                \_SB.PCI0.NHPG ()
+            }
+
+            If ((OSCC & 0x04))
+            {
+                \_SB.PCI0.NPME ()
+            }
+        }
+
+        If ((Arg0 == 0x03))
+        {
+            SSMP = 0x0E
+        }
+
+        If ((Arg0 == 0x03)){}
+        If (((Arg0 == 0x03) || (Arg0 == 0x04)))
+        {
+            If ((GBSX & 0x40))
+            {
+                \_SB.PCI0.GFX0.IUEH (0x06)
+            }
+
+            If ((GBSX & 0x80))
+            {
+                \_SB.PCI0.GFX0.IUEH (0x07)
+            }
+
+            If (CondRefOf (\_PR.DTSE))
+            {
+                If ((\_PR.DTSE && (TCNT > One)))
+                {
+                    TRAP (0x02, 0x14)
+                }
+            }
+
+            OperationRegion (NVID, SystemMemory, 0xE0100000, 0x02)
+            Field (NVID, ByteAcc, NoLock, Preserve)
+            {
+                VVID,   16
+            }
+
+            If ((OSYS >= 0x07D9))
+            {
+                If ((VVID == 0x10DE))
+                {
+                    If ((NHDA == One))
+                    {
+                        \_SB.PCI0.PEG0.PEGP.MLTF = One
+                    }
+                    Else
+                    {
+                        \_SB.PCI0.PEG0.PEGP.MLTF = Zero
+                    }
+                }
+            }
+
+            If ((TBTS == One))
+            {
+                Acquire (OSUM, 0xFFFF)
+                \_GPE.TINI ()
+                Release (OSUM)
+            }
+
+            If ((\_SB.PCI0.RP01.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP01, Zero) // Bus Check
+                //////////////////////////////////////////////////////////////////////
+                //////////////////////////////////////////////////////////////////////
+                //////////////////////////////////////////////////////////////////////
+                Notify (\_SB.PCI0.RP05.PXSX.DSB0.NHI0, Zero) // TB3 controller
+                //////////////////////////////////////////////////////////////////////
+                //////////////////////////////////////////////////////////////////////
+                //////////////////////////////////////////////////////////////////////
+            }
+
+            If ((\_SB.PCI0.RP02.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP02, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP03.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP03, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP04.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP04, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP05.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP05, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP06.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP06, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP07.VDID != 0xFFFFFFFF))
+            {
+                If ((DSTS == Zero))
+                {
+                    Notify (\_SB.PCI0.RP07, Zero) // Bus Check
+                }
+            }
+
+            If ((\_SB.PCI0.RP08.VDID != 0xFFFFFFFF))
+            {
+                If ((DSTS == Zero))
+                {
+                    Notify (\_SB.PCI0.RP08, Zero) // Bus Check
+                }
+            }
+
+            If ((\_SB.PCI0.RP09.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP09, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP10.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP10, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP11.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP11, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP12.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP12, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP13.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP13, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP14.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP14, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP15.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP15, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP16.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP16, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP17.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP17, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP18.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP18, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP19.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP19, Zero) // Bus Check
+            }
+
+            If ((\_SB.PCI0.RP20.VDID != 0xFFFFFFFF))
+            {
+                Notify (\_SB.PCI0.RP20, Zero) // Bus Check
+            }
+        }
+
+        If (((Arg0 == 0x03) || (Arg0 == 0x04))){}
+        EV2 (Arg0, Zero)
+        If (ECG4 ())
+        {
+            GENS (0x1C, One, Zero)
+        }
+        Else
+        {
+            GENS (0x1C, Zero, Zero)
+        }
+
+        If ((TBTS == One))
+        {
+            Signal (WFEV)
+        }
+
+        Return (Package (0x02)
+        {
+            Zero,
+            Zero
+        })
+    }
+
+    Scope (\_GPE)
+    {
+        Method (NTFY, 0, Serialized)
+        {
+            ADBG ("NTFY")
+            If ((NOHP == One))
+            {
+                Switch (ToInteger (TBSE))
+                {
+                    Case (One)
+                    {
+                        ADBG ("Notify RP01")
+                        Notify (\_SB.PCI0.RP01, Zero) // Bus Check
+                        //////////////////////////////////////////////////////////////////////
+                        //////////////////////////////////////////////////////////////////////
+                        //////////////////////////////////////////////////////////////////////
+                        Notify (\_SB.PCI0.RP01.PXSX.DSB0.NHI0, Zero) // TB3 controller
+                        //////////////////////////////////////////////////////////////////////
+                        //////////////////////////////////////////////////////////////////////
+                        //////////////////////////////////////////////////////////////////////
+                    }
+                    Case (0x02)
+                    {
+                        ADBG ("Notify RP02")
+                        Notify (\_SB.PCI0.RP02, Zero) // Bus Check
+                    }
+                    Case (0x03)
+                    {
+                        ADBG ("Notify RP03")
+                        Notify (\_SB.PCI0.RP03, Zero) // Bus Check
+                    }
+                    Case (0x04)
+                    {
+                        ADBG ("Notify RP04")
+                        Notify (\_SB.PCI0.RP04, Zero) // Bus Check
+                    }
+                    Case (0x05)
+                    {
+                        ADBG ("Notify RP05")
+                        Notify (\_SB.PCI0.RP05, Zero) // Bus Check
+                    }
+                    Case (0x06)
+                    {
+                        ADBG ("Notify RP06")
+                        Notify (\_SB.PCI0.RP06, Zero) // Bus Check
+                    }
+                    Case (0x07)
+                    {
+                        ADBG ("Notify RP07")
+                        Notify (\_SB.PCI0.RP07, Zero) // Bus Check
+                    }
+                    Case (0x08)
+                    {
+                        ADBG ("Notify RP08")
+                        Notify (\_SB.PCI0.RP08, Zero) // Bus Check
+                    }
+                    Case (0x09)
+                    {
+                        ADBG ("Notify RP09")
+                        Notify (\_SB.PCI0.RP09, Zero) // Bus Check
+                    }
+                    Case (0x0A)
+                    {
+                        ADBG ("Notify RP10")
+                        Notify (\_SB.PCI0.RP10, Zero) // Bus Check
+                    }
+                    Case (0x0B)
+                    {
+                        ADBG ("Notify RP11")
+                        Notify (\_SB.PCI0.RP11, Zero) // Bus Check
+                    }
+                    Case (0x0C)
+                    {
+                        ADBG ("Notify RP12")
+                        Notify (\_SB.PCI0.RP12, Zero) // Bus Check
+                    }
+                    Case (0x0D)
+                    {
+                        ADBG ("Notify RP13")
+                        Notify (\_SB.PCI0.RP13, Zero) // Bus Check
+                    }
+                    Case (0x0E)
+                    {
+                        ADBG ("Notify RP14")
+                        Notify (\_SB.PCI0.RP14, Zero) // Bus Check
+                    }
+                    Case (0x0F)
+                    {
+                        ADBG ("Notify RP15")
+                        Notify (\_SB.PCI0.RP15, Zero) // Bus Check
+                    }
+                    Case (0x10)
+                    {
+                        ADBG ("Notify RP16")
+                        Notify (\_SB.PCI0.RP16, Zero) // Bus Check
+                    }
+                    Case (0x11)
+                    {
+                        ADBG ("Notify RP17")
+                        Notify (\_SB.PCI0.RP17, Zero) // Bus Check
+                    }
+                    Case (0x12)
+                    {
+                        ADBG ("Notify RP18")
+                        Notify (\_SB.PCI0.RP18, Zero) // Bus Check
+                    }
+                    Case (0x13)
+                    {
+                        ADBG ("Notify RP19")
+                        Notify (\_SB.PCI0.RP19, Zero) // Bus Check
+                    }
+                    Case (0x14)
+                    {
+                        ADBG ("Notify RP20")
+                        Notify (\_SB.PCI0.RP20, Zero) // Bus Check
+                    }
+                    Case (0x15)
+                    {
+                        ADBG ("Notify PEG0")
+                        Notify (\_SB.PCI0.PEG0, Zero) // Bus Check
+                    }
+                    Case (0x16)
+                    {
+                        ADBG ("Notify PEG1")
+                        Notify (\_SB.PCI0.PEG1, Zero) // Bus Check
+                    }
+                    Case (0x17)
+                    {
+                        ADBG ("Notify PEG2")
+                        Notify (\_SB.PCI0.PEG2, Zero) // Bus Check
+                    }
+
+                }
+            }
+        }
+
+        Method (_E42, 0, NotSerialized)  // _Exx: Edge-Triggered GPE, xx=0x00-0xFF
+        {
+            ADBG ("_E42")
+            If ((CF2T == One))
+            {
+                ADBG ("Clear")
+                ADBG ("GPI_GPE_STS")
+                \_SB.CAGS (CPGN)
+            }
+
+            WWAK ()
+            WSUB ()
+            If ((TNAT == One))
+            {
+                Local0 = RSMI ()
+                If (!Local0)
+                {
+                    Return (Zero)
+                }
+
+                If (DMSI ())
+                {
+                    Return (Zero)
+                }
+            }
+
+            If (GNIS ())
+            {
+                Return (Zero)
+            }
+
+            OperationRegion (SPRT, SystemIO, 0xB2, 0x02)
+            Field (SPRT, ByteAcc, Lock, Preserve)
+            {
+                SSMP,   8
+            }
+
+            ADBG ("TBT-HP-Handler")
+            ADBG ("PEG WorkAround")
+            PGWA ()
+            Acquire (OSUM, 0xFFFF)
+            Local1 = TBFF ()
+            If ((Local1 == One))
+            {
+                Sleep (0x10)
+                Release (OSUM)
+                ADBG ("OS_Up_Received")
+                If (((DPTF == One) && (DDDR == One)))
+                {
+                    If (((OSYS == 0x07DD) && (_REV == 0x05)))
+                    {
+                        Return (Zero)
+                    }
+
+                    //////////////////////////////////////////////////////////////////////
+                    //////////////////////////////////////////////////////////////////////
+                    //////////////////////////////////////////////////////////////////////
+                    // _E42 ()
+                    //////////////////////////////////////////////////////////////////////
+                    //////////////////////////////////////////////////////////////////////
+                    //////////////////////////////////////////////////////////////////////
+                }
+
+                Return (Zero)
+            }
+
+            If ((Local1 == 0x02))
+            {
+                NTFY ()
+                Sleep (0x10)
+                Release (OSUM)
+                P8XH (Zero, 0x7D)
+                ADBG ("Disconnect")
+                Return (Zero)
+            }
+
+            If ((SOHP == One))
+            {
+                ADBG ("TBT SW SMI")
+                SSMP = TBSW /* \TBSW */
+            }
+
+            NTFY ()
+            Sleep (0x10)
+            Release (OSUM)
+            ADBG ("End-of-_E42")
+        }
     }
 
     Scope (\_SB.PCI0.RP01.PXSX)
@@ -24,7 +457,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
             {
                 Return (One)
             }
-            Else 
+            Else
             {
                 Return (Zero)
             }
@@ -34,553 +467,14 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
         {
             Return (0x0F)
         }
-
-        Device (TBL1)
+        Device (DSB0)
         {
             Name (_ADR, Zero)  // _ADR: Address
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                Return (0x0F)
-            }
-
-            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-            {
-                Return (Zero)
-            }
-
-            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b") /* Unknown UUID */))
-                {
-                    If (!Arg2)
-                    {
-                        Return (Buffer (One)
-                        {
-                            0x03                                             // .
-                        })
-                    }
-
-                    Local0 = Package (0x02)
-                        {
-                            "PCIHotplugCapable",
-                            Zero
-                        }
-                    Return (Local0)
-                }
-
-                Return (Zero)
-            }
 
             Device (NHI0)
             {
                 Name (_ADR, Zero)  // _ADR: Address
                 Name (_STR, Unicode ("Thunderbolt"))  // _STR: Description String
-                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                {
-                    Return (Zero)
-                }
-
-                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-                {
-                    If (!Arg2)
-                    {
-                        Return (Buffer (One)
-                        {
-                            0x03                                             // .
-                        })
-                    }
-
-                    Local0 = Package (0x03)
-                        {
-                            "power-save",
-                            One,
-                            Buffer (One)
-                            {
-                                0x00                                             // .
-                            }
-                        }
-                    Return (Local0)
-                }
-            }
-        }
-
-        Device (TBL2)
-        {
-            Name (_ADR, 0x00010000)  // _ADR: Address
-            Name (_SUN, One)  // _SUN: Slot User Number
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                Return (0x0F)
-            }
-
-            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-            {
-                Return (Zero)
-            }
-
-            Device (TBLU)
-            {
-                Name (_ADR, Zero)  // _ADR: Address
-                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                {
-                    Return (One)
-                }
-
-                Device (TB00)
-                {
-                    Name (_ADR, Zero)  // _ADR: Address
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        Return (0x0F)
-                    }
-
-                    Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                    {
-                        Return (One)
-                    }
-
-                    Device (DEV0)
-                    {
-                        Name (_ADR, Zero)  // _ADR: Address
-                        Method (_STA, 0, NotSerialized)  // _STA: Status
-                        {
-                            Return (0x0F)
-                        }
-
-                        Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                        {
-                            Return (One)
-                        }
-                    }
-                }
-
-                Device (TB03)
-                {
-                    Name (_ADR, 0x00030000)  // _ADR: Address
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        Return (0x0F)
-                    }
-
-                    Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                    {
-                        Return (One)
-                    }
-
-                    Device (TB3U)
-                    {
-                        Name (_ADR, Zero)  // _ADR: Address
-                        Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                        {
-                            Return (One)
-                        }
-
-                        Device (TB30)
-                        {
-                            Name (_ADR, Zero)  // _ADR: Address
-                            Method (_STA, 0, NotSerialized)  // _STA: Status
-                            {
-                                Return (0x0F)
-                            }
-
-                            Device (DEV0)
-                            {
-                                Name (_ADR, Zero)  // _ADR: Address
-                                Method (_STA, 0, NotSerialized)  // _STA: Status
-                                {
-                                    Return (0x0F)
-                                }
-                            }
-                        }
-
-                        Device (TB33)
-                        {
-                            Name (_ADR, 0x00030000)  // _ADR: Address
-                            Method (_STA, 0, NotSerialized)  // _STA: Status
-                            {
-                                Return (0x0F)
-                            }
-
-                            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                            {
-                                Return (One)
-                            }
-
-                            Device (DEV0)
-                            {
-                                Name (_ADR, Zero)  // _ADR: Address
-                                Method (_STA, 0, NotSerialized)  // _STA: Status
-                                {
-                                    Return (0x0F)
-                                }
-
-                                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                                {
-                                    Return (One)
-                                }
-                            }
-                        }
-
-                        Device (TB34)
-                        {
-                            Name (_ADR, 0x00040000)  // _ADR: Address
-                            Method (_STA, 0, NotSerialized)  // _STA: Status
-                            {
-                                Return (0x0F)
-                            }
-
-                            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                            {
-                                Return (One)
-                            }
-
-                            Device (DEV0)
-                            {
-                                Name (_ADR, Zero)  // _ADR: Address
-                                Method (_STA, 0, NotSerialized)  // _STA: Status
-                                {
-                                    Return (0x0F)
-                                }
-
-                                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                                {
-                                    Return (One)
-                                }
-                            }
-                        }
-
-                        Device (TB35)
-                        {
-                            Name (_ADR, 0x00050000)  // _ADR: Address
-                            Method (_STA, 0, NotSerialized)  // _STA: Status
-                            {
-                                Return (0x0F)
-                            }
-
-                            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                            {
-                                Return (One)
-                            }
-                        }
-
-                        Device (TB36)
-                        {
-                            Name (_ADR, 0x00060000)  // _ADR: Address
-                            Method (_STA, 0, NotSerialized)  // _STA: Status
-                            {
-                                Return (0x0F)
-                            }
-
-                            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                            {
-                                Return (One)
-                            }
-                        }
-                    }
-                }
-
-                Device (TB04)
-                {
-                    Name (_ADR, 0x00040000)  // _ADR: Address
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        Return (0x0F)
-                    }
-
-                    Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                    {
-                        Return (One)
-                    }
-
-                    Device (TB4U)
-                    {
-                        Name (_ADR, Zero)  // _ADR: Address
-                        Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                        {
-                            Return (One)
-                        }
-
-                        Device (TB40)
-                        {
-                            Name (_ADR, Zero)  // _ADR: Address
-                            Method (_STA, 0, NotSerialized)  // _STA: Status
-                            {
-                                Return (0x0F)
-                            }
-
-                            Device (DEV0)
-                            {
-                                Name (_ADR, Zero)  // _ADR: Address
-                                Method (_STA, 0, NotSerialized)  // _STA: Status
-                                {
-                                    Return (0x0F)
-                                }
-
-                                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                                {
-                                    Return (One)
-                                }
-                            }
-                        }
-
-                        Device (TB43)
-                        {
-                            Name (_ADR, 0x00030000)  // _ADR: Address
-                            Method (_STA, 0, NotSerialized)  // _STA: Status
-                            {
-                                Return (0x0F)
-                            }
-
-                            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                            {
-                                Return (One)
-                            }
-
-                            Device (DEV0)
-                            {
-                                Name (_ADR, Zero)  // _ADR: Address
-                                Method (_STA, 0, NotSerialized)  // _STA: Status
-                                {
-                                    Return (0x0F)
-                                }
-
-                                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                                {
-                                    Return (One)
-                                }
-                            }
-                        }
-
-                        Device (TB44)
-                        {
-                            Name (_ADR, 0x00040000)  // _ADR: Address
-                            Method (_STA, 0, NotSerialized)  // _STA: Status
-                            {
-                                Return (0x0F)
-                            }
-
-                            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                            {
-                                Return (One)
-                            }
-
-                            Device (DEV0)
-                            {
-                                Name (_ADR, Zero)  // _ADR: Address
-                                Method (_STA, 0, NotSerialized)  // _STA: Status
-                                {
-                                    Return (0x0F)
-                                }
-
-                                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                                {
-                                    Return (One)
-                                }
-                            }
-                        }
-
-                        Device (TB45)
-                        {
-                            Name (_ADR, 0x00050000)  // _ADR: Address
-                            Method (_STA, 0, NotSerialized)  // _STA: Status
-                            {
-                                Return (0x0F)
-                            }
-
-                            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                            {
-                                Return (One)
-                            }
-                        }
-
-                        Device (TB46)
-                        {
-                            Name (_ADR, 0x00060000)  // _ADR: Address
-                            Method (_STA, 0, NotSerialized)  // _STA: Status
-                            {
-                                Return (0x0F)
-                            }
-
-                            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                            {
-                                Return (One)
-                            }
-                        }
-                    }
-                }
-
-                Device (TB05)
-                {
-                    Name (_ADR, 0x00050000)  // _ADR: Address
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        Return (0x0F)
-                    }
-
-                    Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                    {
-                        Return (One)
-                    }
-                }
-
-                Device (TB06)
-                {
-                    Name (_ADR, 0x00060000)  // _ADR: Address
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        Return (0x0F)
-                    }
-
-                    Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                    {
-                        Return (One)
-                    }
-                }
-            }
-        }
-
-        Device (TBL3)
-        {
-            Name (_ADR, 0x00020000)  // _ADR: Address
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                Return (0x0F)
-            }
-
-            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-            {
-                Return (Zero)
-            }
-
-            Device (TBTU)
-            {
-                Name (_ADR, Zero)  // _ADR: Address
-                Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
-                {
-                    0x6D,
-                    Zero
-                })
-                Device (RHUB)
-                {
-                    Name (_ADR, Zero)  // _ADR: Address
-                    Method (GPLD, 2, Serialized)
-                    {
-                        Name (PCKG, Package (0x01)
-                        {
-                            Buffer (0x10){}
-                        })
-                        CreateField (DerefOf (PCKG [Zero]), Zero, 0x07, REV)
-                        REV = One
-                        CreateField (DerefOf (PCKG [Zero]), 0x40, One, VISI)
-                        VISI = Arg0
-                        CreateField (DerefOf (PCKG [Zero]), 0x57, 0x08, GPOS)
-                        GPOS = Arg1
-                        Return (PCKG) /* \_SB_.PCI0.RP01.PXSX.TBL3.TBTU.RHUB.GPLD.PCKG */
-                    }
-
-                    Method (GUPC, 1, Serialized)
-                    {
-                        Name (PCKG, Package (0x04)
-                        {
-                            Zero,
-                            0xFF,
-                            Zero,
-                            Zero
-                        })
-                        PCKG [Zero] = Arg0
-                        Return (PCKG) /* \_SB_.PCI0.RP01.PXSX.TBL3.TBTU.RHUB.GUPC.PCKG */
-                    }
-
-                    Method (TPLD, 2, Serialized)
-                    {
-                        Name (PCKG, Package (0x01)
-                        {
-                            Buffer (0x10){}
-                        })
-                        CreateField (DerefOf (PCKG [Zero]), Zero, 0x07, REV)
-                        REV = One
-                        CreateField (DerefOf (PCKG [Zero]), 0x40, One, VISI)
-                        VISI = Arg0
-                        CreateField (DerefOf (PCKG [Zero]), 0x57, 0x08, GPOS)
-                        GPOS = Arg1
-                        CreateField (DerefOf (PCKG [Zero]), 0x4A, 0x04, SHAP)
-                        SHAP = One
-                        CreateField (DerefOf (PCKG [Zero]), 0x20, 0x10, WID)
-                        WID = 0x08
-                        CreateField (DerefOf (PCKG [Zero]), 0x30, 0x10, HGT)
-                        HGT = 0x03
-                        Return (PCKG) /* \_SB_.PCI0.RP01.PXSX.TBL3.TBTU.RHUB.TPLD.PCKG */
-                    }
-
-                    Method (TUPC, 1, Serialized)
-                    {
-                        Name (PCKG, Package (0x04)
-                        {
-                            One,
-                            Zero,
-                            Zero,
-                            Zero
-                        })
-                        PCKG [One] = Arg0
-                        Return (PCKG) /* \_SB_.PCI0.RP01.PXSX.TBL3.TBTU.RHUB.TUPC.PCKG */
-                    }
-
-                    Device (UB21)
-                    {
-                        Name (_ADR, One)  // _ADR: Address
-                        Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
-                        {
-                            Return (TUPC (0x09))
-                        }
-
-                        Method (_PLD, 0, NotSerialized)  // _PLD: Physical Location of Device
-                        {
-                            Return (TPLD (One, One))
-                        }
-                    }
-
-                    Device (UB22)
-                    {
-                        Name (_ADR, 0x02)  // _ADR: Address
-                        Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
-                        {
-                            Return (GUPC (Zero))
-                        }
-
-                        Method (_PLD, 0, NotSerialized)  // _PLD: Physical Location of Device
-                        {
-                            Return (GPLD (Zero, Zero))
-                        }
-                    }
-
-                    Device (UB31)
-                    {
-                        Name (_ADR, 0x03)  // _ADR: Address
-                        Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
-                        {
-                            Return (TUPC (0x09))
-                        }
-
-                        Method (_PLD, 0, NotSerialized)  // _PLD: Physical Location of Device
-                        {
-                            Return (TPLD (One, One))
-                        }
-                    }
-
-                    Device (UB32)
-                    {
-                        Name (_ADR, 0x04)  // _ADR: Address
-                        Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
-                        {
-                            Return (GUPC (Zero))
-                        }
-
-                        Method (_PLD, 0, NotSerialized)  // _PLD: Physical Location of Device
-                        {
-                            Return (GPLD (Zero, Zero))
-                        }
-                    }
-                }
             }
         }
     }
