@@ -8,6 +8,7 @@
  */
 DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
 {
+    External (_SB_.PCI0.RP01, DeviceObj)
     External (_SB_.PCI0.RP01.PXSX, DeviceObj)
 
     Method (RWAK, 1, Serialized)
@@ -449,6 +450,20 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
         }
     }
 
+    Scope (\_SB.PCI0.RP01)
+    {
+        Method (_PS0, 0, Serialized)  // _PS0: Power State 0
+        {
+            \_SB.TBFP (One)
+            Local0 = 10000 // 10 seconds
+            While (Local0 > 0 && \_SB.PCI0.RP01.PXSX.AVND == 0xFFFFFFFF)
+            {
+                Sleep (1)
+                Local0--
+            }
+        }
+    }
+
     Scope (\_SB.PCI0.RP01.PXSX)
     {
         Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
@@ -467,6 +482,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TYPC", 0x00000000)
         {
             Return (0x0F)
         }
+
         Device (DSB0)
         {
             Name (_ADR, Zero)  // _ADR: Address
