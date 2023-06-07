@@ -196,23 +196,33 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
-                    <data>T1NJRA==</data>
+                    <data>
+                    T1NJRA==
+                    </data>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data></data>
+                    <data>
+                    </data>
                     <key>OemTableId</key>
-                    <data>AAAAAA==</data>
+                    <data>
+                    AAAAAA==
+                    </data>
                     <key>Replace</key>
-                    <data>WFNJRA==</data>
+                    <data>
+                    WFNJRA==
+                    </data>
                     <key>ReplaceMask</key>
-                    <data></data>
+                    <data>
+                    </data>
                     <key>Skip</key>
                     <integer>0</integer>
                     <key>TableLength</key>
                     <integer>0</integer>
                     <key>TableSignature</key>
-                    <data>AAAAAA==</data>
+                    <data>
+                    AAAAAA==
+                    </data>
                 </dict>
                 <dict>
                     <key>Base</key>
@@ -226,23 +236,233 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
-                    <data>X09TSQ==</data>
+                    <data>
+                    X09TSQ==
+                    </data>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data></data>
+                    <data>
+                    </data>
                     <key>OemTableId</key>
-                    <data>AAAAAA==</data>
+                    <data>
+                    AAAAAA==
+                    </data>
                     <key>Replace</key>
-                    <data>WE9TSQ==</data>
+                    <data>
+                    WE9TSQ==
+                    </data>
                     <key>ReplaceMask</key>
-                    <data></data>
+                    <data>
+                    </data>
                     <key>Skip</key>
                     <integer>0</integer>
                     <key>TableLength</key>
                     <integer>0</integer>
                     <key>TableSignature</key>
-                    <data>AAAAAA==</data>
+                    <data>
+                    AAAAAA==
+                    </data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>HPET _STA to XSTA Rename</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>
+                    EV9TVEE=
+                    </data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data>
+                    </data>
+                    <key>OemTableId</key>
+                    <data>
+                    AAAAAA==
+                    </data>
+                    <key>Replace</key>
+                    <data>
+                    EVhTVEE=
+                    </data>
+                    <key>ReplaceMask</key>
+                    <data>
+                    </data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data>
+                    AAAAAA==
+                    </data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>HPET _CRS to XCRS Rename</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>
+                    JV9DUlM=
+                    </data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data>
+                    </data>
+                    <key>OemTableId</key>
+                    <data>
+                    AAAAAA==
+                    </data>
+                    <key>Replace</key>
+                    <data>
+                    JVhDUlM=
+                    </data>
+                    <key>ReplaceMask</key>
+                    <data>
+                    </data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data>
+                    AAAAAA==
+                    </data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>IPIC IRQ 2 Patch</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>
+                    IgQAeQA=
+                    </data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data>
+                    </data>
+                    <key>OemTableId</key>
+                    <data>
+                    AAAAAA==
+                    </data>
+                    <key>Replace</key>
+                    <data>
+                    IgAAeQA=
+                    </data>
+                    <key>ReplaceMask</key>
+                    <data>
+                    </data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data>
+                    AAAAAA==
+                    </data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>RTC IRQ 8 Patch</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>
+                    IgABeQA=
+                    </data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data>
+                    </data>
+                    <key>OemTableId</key>
+                    <data>
+                    AAAAAA==
+                    </data>
+                    <key>Replace</key>
+                    <data>
+                    IgAAeQA=
+                    </data>
+                    <key>ReplaceMask</key>
+                    <data>
+                    </data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data>
+                    AAAAAA==
+                    </data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>TIMR IRQ 0 Patch</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>
+                    IgEAeQA=
+                    </data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data>
+                    </data>
+                    <key>OemTableId</key>
+                    <data>
+                    AAAAAA==
+                    </data>
+                    <key>Replace</key>
+                    <data>
+                    IgAAeQA=
+                    </data>
+                    <key>ReplaceMask</key>
+                    <data>
+                    </data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data>
+                    AAAAAA==
+                    </data>
                 </dict>
                 <dict>
                     <key>Base</key>
@@ -393,246 +613,6 @@
                     <integer>0</integer>
                     <key>TableSignature</key>
                     <data>RFNEVA==</data>
-                </dict>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>HPET _CRS to XCRS Rename</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>JV9DUlM=</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data>AAAAAA==</data>
-                    <key>Replace</key>
-                    <data>JVhDUlM=</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data>AAAAAA==</data>
-                </dict>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>IPIC IRQ 2 Patch</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>IgQAeQA=</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data>AAAAAA==</data>
-                    <key>Replace</key>
-                    <data>IgAAeQA=</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data>AAAAAA==</data>
-                </dict>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>MATH IRQ 13 Patch</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>IgAgeQA=</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data>AAAAAA==</data>
-                    <key>Replace</key>
-                    <data>IgAAeQA=</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data>AAAAAA==</data>
-                </dict>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>RTC IRQ 8 Patch</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>IgABeQA=</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data>AAAAAA==</data>
-                    <key>Replace</key>
-                    <data>IgAAeQA=</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data>AAAAAA==</data>
-                </dict>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>TIMR IRQ 0 Patch</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>IgEAeQA=</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data>AAAAAA==</data>
-                    <key>Replace</key>
-                    <data>IgAAeQA=</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data>AAAAAA==</data>
-                </dict>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>PS2K IRQ 1 Patch</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>IgIAOHkA</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data>AAAAAA==</data>
-                    <key>Replace</key>
-                    <data>IgAAOHkA</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data>AAAAAA==</data>
-                </dict>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>PS2M IRQ 12 Patch</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>IgAQOHkA</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data>AAAAAA==</data>
-                    <key>Replace</key>
-                    <data>IgAAOHkA</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data>AAAAAA==</data>
-                </dict>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>Rename SAT0 to SATA, optionally pair with SSDT-SATA.aml (purelly cosmetic on Ventura)</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>U0FUMA==</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data></data>
-                    <key>Replace</key>
-                    <data>U0FUQQ==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data></data>
                 </dict>
                 <dict>
                     <key>Base</key>
@@ -927,12 +907,10 @@
                 <dict>
                     <key>AAPL,slot-name</key>
                     <string>Internal@0,28,4/0,0</string>
-                    <key>compatible</key>
-                    <string>pci14e4,43b1</string>
                     <key>device_type</key>
                     <string>Network controller</string>
                     <key>model</key>
-                    <string>BCM4352 802.11ac Wireless Network Adapter</string>
+                    <string>BCM4360 802.11ac Wireless Network Adapter</string>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x1C,0x5)</key>
                 <dict>
@@ -976,8 +954,6 @@
                     <string>Internal@0,31,0</string>
                     <key>device_type</key>
                     <string>ISA bridge</string>
-                    <key>ec-device</key>
-                    <string>Intel_EC_V6</string>
                     <key>model</key>
                     <string>Sunrise Point-LP LPC Controller</string>
                 </dict>
@@ -1459,96 +1435,6 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/VoodooInput</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>AirportBrcmFixup.kext</string>
-                    <key>Comment</key>
-                    <string>V2.1.7 | AirportBrcmFixup.kext</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/AirportBrcmFixup</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0 | AirPortBrcmNIC_Injector.kext</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string></string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>BlueToolFixup.kext</string>
-                    <key>Comment</key>
-                    <string>V2.6.6</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/BlueToolFixup</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>BrcmFirmwareData.kext</string>
-                    <key>Comment</key>
-                    <string>V2.6.6 | BrcmFirmwareData.kext</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/BrcmFirmwareData</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>BrcmPatchRAM3.kext</string>
-                    <key>Comment</key>
-                    <string>V2.6.6 | BrcmPatchRAM3.kext</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/BrcmPatchRAM3</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -2144,12 +2030,8 @@
                 </dict>
                 <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
                 <dict>
-                    <key>bluetoothExternalDongleFailed</key>
-                    <data>AA==</data>
-                    <key>bluetoothInternalControllerInfo</key>
-                    <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string>-v debug=0x100 keepsyms=1 acpi_layer=0x8 acpi_level=0x2 brcmfx-country=#a hbfx-ahbm=39</string>
+                    <string>-v debug=0x100 keepsyms=1 acpi_layer=0x8 acpi_level=0x2 hbfx-ahbm=39</string>
                     <key>csr-active-config</key>
                     <data>AAAAAA==</data>
                     <key>prev-lang:kbd</key>
