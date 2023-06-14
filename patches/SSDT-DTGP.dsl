@@ -33,7 +33,7 @@
  * References:
  * [1] 
  */
-DefinitionBlock ("", "SSDT", 0, "hack", "_Debug", 0x00001000)
+DefinitionBlock ("", "SSDT", 0, "hack", "DTGP", 0x00001000)
 {
     Method (DTGP, 5, NotSerialized)
     {

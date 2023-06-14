@@ -5,7 +5,7 @@
  * References:
  * [1] 
  */
-DefinitionBlock ("", "SSDT", 2, "DRTNIA", "SsdtEC", 0x00001000)
+DefinitionBlock ("", "SSDT", 2, "hack", "USBX", 0x00001000)
 {
     If (_OSI ("Darwin"))
     {

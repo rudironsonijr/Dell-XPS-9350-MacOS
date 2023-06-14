@@ -9,7 +9,7 @@
  * [1] https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/page-148#post-1277391
  * [2] https://github.com/5T33Z0/OC-Little-Translated/tree/main/01_Adding_missing_Devices_and_enabling_Features/SSDT-MEM2
  */
-DefinitionBlock ("", "SSDT", 2, "OCLT", "MEM2", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "hack", "MEM2", 0x00000000)
 {
     Device (MEM2)
     {

@@ -13,7 +13,7 @@
  * References:
  * [1] https://github.com/5T33Z0/OC-Little-Translated/tree/main/01_Adding_missing_Devices_and_enabling_Features/System_Management_Bus_and_Memory_Controller_(SSDT-SBUS-MCHC)
  */
-DefinitionBlock ("", "SSDT", 2, "OCLT", "MCHC", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "hack", "MCHC", 0x00000000)
 {
     External (_SB_.PCI0, DeviceObj)
 

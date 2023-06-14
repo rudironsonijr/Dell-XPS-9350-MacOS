@@ -5,7 +5,7 @@
  * References:
  * [1] https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html
  */
-DefinitionBlock ("", "SSDT", 2, "ACDT", "CpuPlug", 0x00003000)
+DefinitionBlock ("", "SSDT", 2, "hack", "CpuPlug", 0x00003000)
 {
     External (_PR_.CPU0, ProcessorObj)
 

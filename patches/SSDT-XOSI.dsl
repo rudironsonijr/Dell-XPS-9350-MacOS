@@ -9,7 +9,7 @@
  * References:
  * [1] https://github.com/5T33Z0/OC-Little-Translated/tree/main/01_Adding_missing_Devices_and_enabling_Features/OS_Compatibility_Patch_(XOSI)
  */
-DefinitionBlock ("", "SSDT", 2, "DRTNIA", "XOSI", 0x00001000)
+DefinitionBlock ("", "SSDT", 2, "hack", "XOSI", 0x00001000)
 {
     Method (XOSI, 1, NotSerialized)
     {
