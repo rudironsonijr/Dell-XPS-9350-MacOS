@@ -196,33 +196,23 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
-                    <data>
-                    T1NJRA==
-                    </data>
+                    <data>T1NJRA==</data>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>OemTableId</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>Replace</key>
-                    <data>
-                    WFNJRA==
-                    </data>
+                    <data>WFNJRA==</data>
                     <key>ReplaceMask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>Skip</key>
                     <integer>0</integer>
                     <key>TableLength</key>
                     <integer>0</integer>
                     <key>TableSignature</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                 </dict>
                 <dict>
                     <key>Base</key>
@@ -236,33 +226,23 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
-                    <data>
-                    X09TSQ==
-                    </data>
+                    <data>X09TSQ==</data>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>OemTableId</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>Replace</key>
-                    <data>
-                    WE9TSQ==
-                    </data>
+                    <data>WE9TSQ==</data>
                     <key>ReplaceMask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>Skip</key>
                     <integer>0</integer>
                     <key>TableLength</key>
                     <integer>0</integer>
                     <key>TableSignature</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                 </dict>
                 <dict>
                     <key>Base</key>
@@ -276,33 +256,23 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
-                    <data>
-                    EV9TVEE=
-                    </data>
+                    <data>EV9TVEE=</data>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>OemTableId</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>Replace</key>
-                    <data>
-                    EVhTVEE=
-                    </data>
+                    <data>EVhTVEE=</data>
                     <key>ReplaceMask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>Skip</key>
                     <integer>0</integer>
                     <key>TableLength</key>
                     <integer>0</integer>
                     <key>TableSignature</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                 </dict>
                 <dict>
                     <key>Base</key>
@@ -316,33 +286,23 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
-                    <data>
-                    JV9DUlM=
-                    </data>
+                    <data>JV9DUlM=</data>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>OemTableId</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>Replace</key>
-                    <data>
-                    JVhDUlM=
-                    </data>
+                    <data>JVhDUlM=</data>
                     <key>ReplaceMask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>Skip</key>
                     <integer>0</integer>
                     <key>TableLength</key>
                     <integer>0</integer>
                     <key>TableSignature</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                 </dict>
                 <dict>
                     <key>Base</key>
@@ -356,33 +316,23 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
-                    <data>
-                    IgQAeQA=
-                    </data>
+                    <data>IgQAeQA=</data>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>OemTableId</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>Replace</key>
-                    <data>
-                    IgAAeQA=
-                    </data>
+                    <data>IgAAeQA=</data>
                     <key>ReplaceMask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>Skip</key>
                     <integer>0</integer>
                     <key>TableLength</key>
                     <integer>0</integer>
                     <key>TableSignature</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                 </dict>
                 <dict>
                     <key>Base</key>
@@ -396,33 +346,23 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
-                    <data>
-                    IgABeQA=
-                    </data>
+                    <data>IgABeQA=</data>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>OemTableId</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>Replace</key>
-                    <data>
-                    IgAAeQA=
-                    </data>
+                    <data>IgAAeQA=</data>
                     <key>ReplaceMask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>Skip</key>
                     <integer>0</integer>
                     <key>TableLength</key>
                     <integer>0</integer>
                     <key>TableSignature</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                 </dict>
                 <dict>
                     <key>Base</key>
@@ -436,33 +376,23 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
-                    <data>
-                    IgEAeQA=
-                    </data>
+                    <data>IgEAeQA=</data>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>OemTableId</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                     <key>Replace</key>
-                    <data>
-                    IgAAeQA=
-                    </data>
+                    <data>IgAAeQA=</data>
                     <key>ReplaceMask</key>
-                    <data>
-                    </data>
+                    <data></data>
                     <key>Skip</key>
                     <integer>0</integer>
                     <key>TableLength</key>
                     <integer>0</integer>
                     <key>TableSignature</key>
-                    <data>
-                    AAAAAA==
-                    </data>
+                    <data>AAAAAA==</data>
                 </dict>
                 <dict>
                     <key>Base</key>
@@ -1088,7 +1018,7 @@
                     <key>BundlePath</key>
                     <string>Lilu.kext</string>
                     <key>Comment</key>
-                    <string>V1.6.5</string>
+                    <string>V1.6.6</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1106,7 +1036,7 @@
                     <key>BundlePath</key>
                     <string>VirtualSMC.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.1</string>
+                    <string>V1.3.2</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1124,7 +1054,7 @@
                     <key>BundlePath</key>
                     <string>SMCBatteryManager.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.1 | SMCBatteryManager.kext</string>
+                    <string>V1.3.2 | SMCBatteryManager.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1142,7 +1072,7 @@
                     <key>BundlePath</key>
                     <string>SMCProcessor.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.1 | SMCProcessor.kext</string>
+                    <string>V1.3.2 | SMCProcessor.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1160,7 +1090,7 @@
                     <key>BundlePath</key>
                     <string>SMCDellSensors.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.1 | SMCDellSensors.kext</string>
+                    <string>V1.3.2 | SMCDellSensors.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1178,7 +1108,7 @@
                     <key>BundlePath</key>
                     <string>WhateverGreen.kext</string>
                     <key>Comment</key>
-                    <string>V1.6.4 | WhateverGreen.kext</string>
+                    <string>V1.6.5 | WhateverGreen.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1196,7 +1126,7 @@
                     <key>BundlePath</key>
                     <string>CPUFriend.kext</string>
                     <key>Comment</key>
-                    <string>V1.2.6 | CPUFriend.kext</string>
+                    <string>V1.2.7 | CPUFriend.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1250,29 +1180,11 @@
                     <key>BundlePath</key>
                     <string>HibernationFixup.kext</string>
                     <key>Comment</key>
-                    <string>V1.4.8 | HibernationFixup.kext</string>
+                    <string>V1.4.9 | HibernationFixup.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/HibernationFixup</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>USBMap.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0 | USBMap.kext</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string></string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -1448,7 +1360,7 @@
                     <key>BundlePath</key>
                     <string>DebugEnhancer.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.7 | Enable debug output in the macOS kernel</string>
+                    <string>V1.0.8 | Enable debug output in the macOS kernel</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1466,7 +1378,7 @@
                     <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.8.2 | AppleALC.kext</string>
+                    <string>V1.8.3 | AppleALC.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1484,7 +1396,7 @@
                     <key>BundlePath</key>
                     <string>ECEnabler.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.3 | ECEnabler.kext</string>
+                    <string>V1.0.4 | ECEnabler.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1520,7 +1432,7 @@
                     <key>BundlePath</key>
                     <string>FeatureUnlock.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.4</string>
+                    <string>V1.1.5</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1540,7 +1452,7 @@
                     <key>Comment</key>
                     <string>V1.0.4 | RealtekCardReaderFriend.kext</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/RealtekCardReaderFriend</string>
                     <key>MaxKernel</key>
@@ -1558,7 +1470,7 @@
                     <key>Comment</key>
                     <string>V0.9.7 | RealtekCardReader.kext</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/RealtekCardReader</string>
                     <key>MaxKernel</key>
@@ -1622,6 +1534,78 @@
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>USBMap.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string></string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>AutoPkgInstaller.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0.1 | Chainload OpenCore-Patcher installation</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AutoPkgInstaller</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>20.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>KDKlessWorkaround.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0.0 | KDKlessWorkaround</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/KDKlessWorkaround</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>22.3.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>RSRHelper.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0.0 | RSRHelper</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/RSRHelper</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>20.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
             </array>
             <key>Block</key>
             <array/>
@@ -1674,11 +1658,41 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>Base</key>
-                    <string>_AcpiOsVprintf</string>
+                    <string></string>
                     <key>Comment</key>
-                    <string>Disable ACPI logging</string>
+                    <string>Patch AppleSMC</string>
+                    <key>Count</key>
+                    <integer>1</integer>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Find</key>
+                    <data>c21jLXZlcnNpb24=</data>
+                    <key>Identifier</key>
+                    <string>com.apple.driver.AppleSMC</string>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>Replace</key>
+                    <data>b2xkLXZlcnNpb24=</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>Base</key>
+                    <string>_apfs_filevault_allowed</string>
+                    <key>Comment</key>
+                    <string>Force FileVault on Broken Seal</string>
                     <key>Count</key>
                     <integer>0</integer>
                     <key>Enabled</key>
@@ -1686,17 +1700,77 @@
                     <key>Find</key>
                     <data></data>
                     <key>Identifier</key>
-                    <string>com.apple.driver.AppleACPIPlatform</string>
+                    <string>com.apple.filesystems.apfs</string>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
                     <data></data>
                     <key>MaxKernel</key>
-                    <string>18.5.0</string>
+                    <string></string>
                     <key>MinKernel</key>
-                    <string>18.5.0</string>
+                    <string>20.4.0</string>
                     <key>Replace</key>
-                    <data>ww==</data>
+                    <data>uAEAAADD</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>Base</key>
+                    <string>_cs_require_lv</string>
+                    <key>Comment</key>
+                    <string>Disable Library Validation Enforcement</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Find</key>
+                    <data></data>
+                    <key>Identifier</key>
+                    <string>kernel</string>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>20.0.0</string>
+                    <key>Replace</key>
+                    <data>uAAAAADD</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>Base</key>
+                    <string>__ZL22_vnode_check_signatureP5vnodeP5labeliP7cs_blobPjS5_ijPPcPm</string>
+                    <key>Comment</key>
+                    <string>Disable _csr_check() in _vnode_check_signature</string>
+                    <key>Count</key>
+                    <integer>1</integer>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Find</key>
+                    <data>AQAAAOgAAAAAhcB1</data>
+                    <key>Identifier</key>
+                    <string>com.apple.driver.AppleMobileFileIntegrity</string>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data>//////8AAAAA////</data>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>22.0.0</string>
+                    <key>Replace</key>
+                    <data>AQAAALgBAAAAhcB1</data>
                     <key>ReplaceMask</key>
                     <data></data>
                     <key>Skip</key>
@@ -2260,6 +2334,8 @@
             <dict>
                 <key>ClearScreenOnModeSwitch</key>
                 <false/>
+                <key>ConsoleFont</key>
+                <string></string>
                 <key>ConsoleMode</key>
                 <string></string>
                 <key>DirectGopRendering</key>
@@ -2289,7 +2365,7 @@
                 <key>TextRenderer</key>
                 <string>BuiltinGraphics</string>
                 <key>UIScale</key>
-                <integer>2</integer>
+                <integer>0</integer>
                 <key>UgaPassThrough</key>
                 <false/>
             </dict>
@@ -2328,6 +2404,8 @@
                 <key>HashServices</key>
                 <false/>
                 <key>OSInfo</key>
+                <false/>
+                <key>PciIo</key>
                 <false/>
                 <key>UnicodeCollation</key>
                 <false/>
