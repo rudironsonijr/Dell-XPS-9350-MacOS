@@ -1,4 +1,6 @@
 /*
+ * Detect Darwin (OSX) to enable other patches
+ *
  * DTGP method explained
  *
  * In addition to using DeviceProperties to inject device parameters into macOS, you can also use the method _DSM (Device Specific Method) to do so.
@@ -33,11 +35,12 @@
  * References:
  * [1] 
  */
-DefinitionBlock ("", "SSDT", 0, "hack", "DTGP", 0x00001000)
+
+DefinitionBlock ("", "SSDT", 2, "tyler", "_Darwin", 0)
 {
     Method (DTGP, 5, NotSerialized)
     {
-        If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b") /* Unknown UUID */))
+        If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b")))
         {
             If ((Arg1 == One))
             {
@@ -45,7 +48,7 @@ DefinitionBlock ("", "SSDT", 0, "hack", "DTGP", 0x00001000)
                 {
                     Arg4 = Buffer (One)
                         {
-                             0x03                                             // .
+                             0x03
                         }
                     Return (One)
                 }
@@ -59,8 +62,23 @@ DefinitionBlock ("", "SSDT", 0, "hack", "DTGP", 0x00001000)
 
         Arg4 = Buffer (One)
             {
-                 0x00                                             // .
+                 0x00
             }
         Return (Zero)
+    }
+
+    Scope (\)
+    {
+        Method (OSDW, 0, NotSerialized)
+        {
+            If (CondRefOf (\_OSI, Local0))
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Return (One) // is Darwin
+                }
+            }
+            Return (Zero)
+        }
     }
 }

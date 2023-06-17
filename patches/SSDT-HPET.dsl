@@ -14,6 +14,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "HPET", 0x00000000)
 {
     External (_SB_.PCI0.LPCB.HPET, DeviceObj)
     External (_SB_.PCI0.LPCB.HPET.XCRS, MethodObj)    // 0 Arguments
+    External (_SB_.PCI0.LPCB.HPET.XSTA, MethodObj)    // 0 Arguments
 
     Scope (\_SB.PCI0.LPCB.HPET)
     {
@@ -35,6 +36,15 @@ DefinitionBlock ("", "SSDT", 2, "hack", "HPET", 0x00000000)
 
             Return (\_SB.PCI0.LPCB.HPET.XCRS ())
         }
+
+        Method (_STA, 0, NotSerialized)  // _STA: Status
+        {
+            If ((_OSI ("Darwin") || !CondRefOf (\_SB.PCI0.LPCB.HPET.XSTA)))
+            {
+                Return (0x0F)
+            }
+
+            Return (\_SB.PCI0.LPCB.HPET.XSTA ())
+        }
     }
 }
-

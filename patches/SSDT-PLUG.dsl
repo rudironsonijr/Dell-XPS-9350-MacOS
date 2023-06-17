@@ -33,13 +33,5 @@ DefinitionBlock ("", "SSDT", 2, "hack", "CpuPlug", 0x00003000)
             Return (PMPM (Arg0, Arg1, Arg2, Arg3))
         }
     }
-
-    Scope (\_GPE)
-    {
-        Method (LXEN, 0, NotSerialized)
-        {
-            Return (One)
-        }
-    }
 }
 
