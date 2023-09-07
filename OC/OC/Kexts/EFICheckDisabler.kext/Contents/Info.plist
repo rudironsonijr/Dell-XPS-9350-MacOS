@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>EFICheckDisabler 0.5, Copyright (GPLv2) © 2017 by RehabMan. All rights reserved.</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.dortania.EFICheckDisabler</string>
+	<string>org.rehabman.disabler.eficheck</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -11,17 +15,19 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>0.5</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>EFICheckDisabler</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.dortania.EFICheckDisabler</string>
+			<string>com.apple.kpi.iokit</string>
 			<key>IOClass</key>
 			<string>IOService</string>
 			<key>IOMatchCategory</key>
 			<string>com_apple_driver_eficheck</string>
+			<key>IOProbeScore</key>
+			<integer>5000</integer>
 			<key>IONameMatch</key>
 			<array>
 				<string>pci8086,1c41</string>
@@ -111,15 +117,10 @@
 				<string>pci8086,9d4e</string>
 				<string>pci8086,a145</string>
 				<string>pci8086,a151</string>
-				<string>pci8086,a306</string>
 			</array>
-			<key>IOProbeScore</key>
-			<integer>2147483647</integer>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
 		</dict>
 	</dict>
-	<key>OSBundleRequired</key>
-	<string>Root</string>
 </dict>
 </plist>
